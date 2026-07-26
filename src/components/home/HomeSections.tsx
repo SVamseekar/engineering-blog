@@ -6,33 +6,36 @@ import { projects } from "@/data/projects";
 import { formatDate } from "@/lib/utils";
 import { NewsletterForm } from "@/components/home/NewsletterForm";
 import { ContinueReading } from "@/components/reader/ContinueReading";
+import { FadeIn } from "@/components/home/Motion";
 
 export function Hero() {
   return (
     <section className="section-pad">
-      <p className="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-[var(--accent)]">
-        Engineering publication
-      </p>
-      <h1 className="font-display text-display max-w-3xl text-[var(--fg)]">
-        Systems that earn their keep in production
-      </h1>
-      <p className="mt-4 max-w-2xl text-lg leading-relaxed text-[var(--muted)]">
-        Field notes on restaurant ops, EU AI assurance, workforce compliance,
-        transit safety, and commercial analytics — wired to real products, not
-        tutorial demos.
-      </p>
-      <div className="mt-8 flex flex-wrap gap-3">
-        <Link href="/articles" className="btn-primary">
-          Latest articles
-        </Link>
-        <Link href="/series" className="btn-secondary">
-          Explore series
-        </Link>
-        <a href="#newsletter" className="btn-ghost">
-          Subscribe
-        </a>
-      </div>
-      <ContinueReading />
+      <FadeIn>
+        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-[var(--accent)]">
+          Engineering publication
+        </p>
+        <h1 className="font-display text-display max-w-3xl text-[var(--fg)]">
+          Systems that earn their keep in production
+        </h1>
+        <p className="mt-4 max-w-2xl text-lg leading-relaxed text-[var(--muted)]">
+          Field notes on restaurant ops, EU AI assurance, workforce compliance,
+          transit safety, and commercial analytics — wired to real products, not
+          tutorial demos.
+        </p>
+        <div className="mt-8 flex flex-wrap gap-3">
+          <Link href="/articles" className="btn-primary">
+            Latest articles
+          </Link>
+          <Link href="/series" className="btn-secondary">
+            Explore series
+          </Link>
+          <a href="#newsletter" className="btn-ghost">
+            Subscribe
+          </a>
+        </div>
+        <ContinueReading />
+      </FadeIn>
     </section>
   );
 }
