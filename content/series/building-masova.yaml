@@ -1,0 +1,9 @@
+id: building-masova
+title: Building MaSoVa
+description: Field notes from designing a multi-tenant restaurant OS — kitchen queues, fiscal ledgers, and delivery under rush.
+projects:
+  - masova
+audience: Operators and engineers shipping restaurant systems
+prerequisites: Curiosity about real kitchen workflows; no Java tutorials required
+recommendedOrder:
+  - why-restaurants-still-lose-tickets-at-rush

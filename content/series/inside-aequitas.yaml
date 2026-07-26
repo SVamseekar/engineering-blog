@@ -1,0 +1,7 @@
+id: inside-aequitas
+title: Inside Aequitas
+description: Transit safety, GIS corridors, and dispatcher awareness under uncertainty.
+projects:
+  - aequitas
+audience: Mobility and GIS builders
+prerequisites: Basic spatial systems familiarity
