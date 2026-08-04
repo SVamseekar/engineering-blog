@@ -18,7 +18,11 @@ import { ScrollProgress } from "@/components/article/ScrollProgress";
 import { BookmarkButton } from "@/components/article/BookmarkButton";
 import { TrackView } from "@/components/article/TrackView";
 import { LinkCard } from "@/components/integrations/LinkCard";
-import { YouTubeFacade } from "@/components/integrations/YouTubeFacade";
+import {
+  MediaTriad,
+  mediaFromPostAndRelease,
+} from "@/components/integrations/MediaTriad";
+import { releaseForArticle } from "@/data/releases";
 import { getProject } from "@/data/projects";
 import { ArticleCard } from "@/components/home/HomeSections";
 
@@ -192,6 +196,12 @@ export default async function ArticlePage({ params }: PageProps) {
             <div className="lg:hidden">
               <TableOfContents items={post.toc} />
             </div>
+            <MediaTriad
+              {...mediaFromPostAndRelease(
+                post,
+                releaseForArticle(post.slug)
+              )}
+            />
             <div className="prose-blog">{mdx}</div>
             <div className="mt-10 space-y-2">
               {post.github?.map((url) => (
@@ -223,9 +233,6 @@ export default async function ArticlePage({ params }: PageProps) {
                   kind="api"
                 />
               ) : null}
-              {post.youtube?.map((id) => (
-                <YouTubeFacade key={id} id={id} />
-              ))}
             </div>
           </div>
           <aside className="hidden lg:block">

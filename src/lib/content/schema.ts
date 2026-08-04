@@ -38,7 +38,13 @@ export const FrontmatterSchema = z.object({
   github: z.array(z.string()).optional(),
   demo: z.string().optional(),
   docs: z.string().optional(),
+  /** Long-form YouTube ids/URLs (legacy + extra embeds) */
   youtube: z.array(z.string()).optional(),
+  /** YouTube Short id or URL — part of short + podcast + blog triad */
+  youtubeShort: z.string().optional(),
+  /** Podcast episode URL (Spotify, Apple, RSS, YouTube full, etc.) */
+  podcast: z.string().optional(),
+  podcastLabel: z.string().optional(),
   notebook: z.string().optional(),
   apiDocs: z.string().optional(),
   faq: z.array(FaqSchema).optional(),
