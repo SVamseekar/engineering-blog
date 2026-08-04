@@ -1,0 +1,1399 @@
+{
+    "current_week": 12,
+    "history": {
+        "masova": [
+            {
+                "week": 1,
+                "topic": "Architecting a Multi-Tenant, Dual-Write Engine for Modern European Restaurant Networks",
+                "summary": "An deep architectural look into MaSoVa Restaurant OS's dual-write engine, which separates synchronous PostgreSQL financial ledger writes from asynchronous MongoDB document synchronization using Spring Boot, the Transactional Outbox pattern, and RabbitMQ.",
+                "timestamp": "2026-07-25T13:17:07.201465"
+            },
+            {
+                "week": 1,
+                "topic": "Why I Built MaSoVa: Architecting an OS to Solve Restaurant Order Chaos and Fiscal Compliance",
+                "summary": "An in-depth look at how MaSoVa Restaurant OS decouples its real-time Kitchen Display System (KDS) from its compliance-heavy fiscal tax ledger to eliminate kitchen delays while satisfying strict European tax auditing standards.",
+                "timestamp": "2026-07-25T14:23:06.991060"
+            },
+            {
+                "week": 1,
+                "topic": "Decoupling the Pass: Architecting a Real-Time Kitchen Display System with a Compliant Fiscal Ledger",
+                "summary": "This post explains how MaSoVa Restaurant OS decouples its real-time Kitchen Display System (KDS) from its compliance-heavy fiscal tax ledger to eliminate kitchen delays while satisfying strict European tax auditing standards.",
+                "timestamp": "2026-07-25T14:35:13.588954"
+            },
+            {
+                "week": 1,
+                "topic": "Architecting MaSoVa: Solving Restaurant Operational Chaos and Fiscal Compliance at Scale",
+                "summary": "An in-depth look at how MaSoVa Restaurant OS decouples its real-time Kitchen Display System (KDS) from its compliance-heavy fiscal tax ledger to eliminate kitchen delays while satisfying strict European tax auditing standards.",
+                "timestamp": "2026-07-25T14:36:09.083805"
+            },
+            {
+                "week": 1,
+                "topic": "[DRY-RUN] Why restaurants still lose tickets at rush",
+                "summary": "Dry-run summary for Why restaurants still lose tickets at rush",
+                "timestamp": "2026-07-25T15:18:26.247160",
+                "status": "draft",
+                "slug": "dry-run-why-restaurants-still-lose-tickets-at-rush",
+                "day": 1
+            },
+            {
+                "week": 1,
+                "topic": "Why Restaurants Still Lose Tickets at Rush (And How I Replaced Paper with a Unified Queue)",
+                "summary": "A look at how paper tickets and siloed delivery tablets break down during kitchen rushes, and how I built MaSoVa to unify POS, aggregator, and fiscal queues into a single real-time Kitchen Display System.",
+                "timestamp": "2026-07-25T15:42:00.363333",
+                "status": "draft",
+                "slug": "why-restaurants-still-lose-tickets-at-rush-and-how-i-replaced-paper-with-a-unifi",
+                "day": 1
+            },
+            {
+                "week": 2,
+                "topic": "Kitchen Display as an operations tool, not a gadget",
+                "summary": "MaSoVa's KDS is built for station routing and prep-time coordination, not to look modern \u2014 and the configuration burden it places on non-technical managers is still the biggest open gap.",
+                "timestamp": "2026-07-27T21:13:17.940675",
+                "status": "draft",
+                "slug": "kitchen-display-as-an-operations-tool-not-a-gadget",
+                "day": 1
+            },
+            {
+                "week": 3,
+                "topic": "Delivery tablets that ignore your kitchen",
+                "summary": "How MaSoVa's third-party order sync pulls aggregator orders into the same kitchen queue as POS tickets, and why the allergen assistant's job stays narrowly scoped to flagging conflicts, not deciding what to cook.",
+                "timestamp": "2026-07-27T21:24:47.758645",
+                "status": "draft",
+                "slug": "delivery-tablets-that-ignore-your-kitchen",
+                "day": 1
+            },
+            {
+                "week": 4,
+                "topic": "Multi-location chains vs single site pain",
+                "summary": "Why multi-location restaurant operations don't create harder domain problems than a single site, just less visibility for the owner, and how MaSoVa's tenant isolation and manager override auditing replace what used to be the owner's physical presence.",
+                "timestamp": "2026-07-27T21:24:47.763127",
+                "status": "draft",
+                "slug": "multi-location-chains-vs-single-site-pain",
+                "day": 1
+            },
+            {
+                "week": 5,
+                "topic": "Field note: Why restaurants still lose tickets at rush",
+                "summary": "A plain-language introduction to why unifying order sources, not just digitizing the kitchen display, is what actually fixes lost tickets during a rush.",
+                "timestamp": "2026-07-27T21:33:54.800218",
+                "status": "draft",
+                "slug": "field-note-why-restaurants-still-lose-tickets-at-rush",
+                "day": 1
+            },
+            {
+                "week": 6,
+                "topic": "Field note: Kitchen Display as an operations tool, not a gadget",
+                "summary": "A plain introduction to why MaSoVa's Kitchen Display System depends on unifying every order source and running fiscal signing on a separate track, so the screen never lags during a rush.",
+                "timestamp": "2026-07-27T21:33:54.806361",
+                "status": "draft",
+                "slug": "field-note-kitchen-display-as-an-operations-tool-not-a-gadget",
+                "day": 1
+            },
+            {
+                "week": 7,
+                "topic": "Field note: Delivery tablets that ignore your kitchen",
+                "summary": "A plain introduction to why unifying aggregator orders onto one screen is only half the fix, and how station routing and manager override auditing are where the real value shows up afterward.",
+                "timestamp": "2026-07-27T22:07:15.748267",
+                "status": "draft",
+                "slug": "field-note-delivery-tablets-that-ignore-your-kitchen",
+                "day": 1
+            },
+            {
+                "week": 8,
+                "topic": "Field note: Multi-location chains vs single site pain",
+                "summary": "A plain introduction to why scaling from one restaurant site to several multiplies the places where reality can diverge from assumed data, and why the AI allergen assistant and recipe costing need accurate per-location data to stay meaningful.",
+                "timestamp": "2026-07-27T22:07:15.756950",
+                "status": "draft",
+                "slug": "field-note-multi-location-chains-vs-single-site-pain",
+                "day": 1
+            },
+            {
+                "week": 9,
+                "topic": "A Monday explainer on Why restaurants still lose tickets at rush",
+                "summary": "A plain Monday-morning walkthrough of why kitchens still lose orders during a rush, and why MaSoVa's KDS has to run fiscal signing on a separate track to stay instant.",
+                "timestamp": "2026-07-27T22:58:57.887014",
+                "status": "draft",
+                "slug": "a-monday-explainer-on-why-restaurants-still-lose-tickets-at-rush",
+                "day": 1
+            },
+            {
+                "week": 10,
+                "topic": "A Monday explainer on Kitchen Display as an operations tool, not a gadget",
+                "summary": "A plain Monday walkthrough of why a Kitchen Display System's real value is station routing and prep timing, and why tableside ordering has to feed the same unified queue to avoid recreating the old chaos.",
+                "timestamp": "2026-07-27T22:58:57.897468",
+                "status": "draft",
+                "slug": "a-monday-explainer-on-kitchen-display-as-an-operations-tool-not-a-gadget",
+                "day": 1
+            },
+            {
+                "week": 11,
+                "topic": "A Monday explainer on Delivery tablets that ignore your kitchen",
+                "summary": "A plain Monday walkthrough of how third-party order sync unifies aggregator orders into MaSoVa's pipeline, and why the AI allergen assistant depends on that unification to protect delivery customers.",
+                "timestamp": "2026-07-27T22:58:57.908562",
+                "status": "draft",
+                "slug": "a-monday-explainer-on-delivery-tablets-that-ignore-your-kitchen",
+                "day": 1
+            },
+            {
+                "week": 12,
+                "topic": "A Monday explainer on Multi-location chains vs single site pain",
+                "summary": "A plain Monday walkthrough of why multi-location restaurant operations need manager override auditing to replace the physical presence an owner used to provide at a single site.",
+                "timestamp": "2026-07-27T22:58:57.920450",
+                "status": "draft",
+                "slug": "a-monday-explainer-on-multi-location-chains-vs-single-site-pain",
+                "day": 1
+            }
+        ],
+        "eu-ai-assurance": [
+            {
+                "week": 1,
+                "topic": "High-risk is a workflow label, not a vibe",
+                "summary": "How EU AI Assurance OS turns risk-tier classification from an informal judgment call into a repeatable workflow tied to a control catalog and a tamper-evident audit ledger.",
+                "timestamp": "2026-07-27T21:13:17.937370",
+                "status": "draft",
+                "slug": "high-risk-is-a-workflow-label-not-a-vibe",
+                "day": 2
+            },
+            {
+                "week": 2,
+                "topic": "Dataset provenance in plain language",
+                "summary": "Why dataset provenance has to be tracked as a structural, versioned chain tied to the model registry rather than a spreadsheet, and what an auditor is actually asking when they question a model's training data.",
+                "timestamp": "2026-07-27T21:13:17.941647",
+                "status": "draft",
+                "slug": "dataset-provenance-in-plain-language",
+                "day": 2
+            },
+            {
+                "week": 3,
+                "topic": "Vendor models and shared responsibility",
+                "summary": "Why using a third-party foundation model doesn't hand off EU AI Act obligations to the vendor, and how EU AI Assurance OS keeps a non-repudiable audit trail on vendor-model deployments just as it would for a self-trained model.",
+                "timestamp": "2026-07-27T21:24:47.759500",
+                "status": "draft",
+                "slug": "vendor-models-and-shared-responsibility",
+                "day": 2
+            },
+            {
+                "week": 4,
+                "topic": "Training the compliance officer on the tool",
+                "summary": "Why EU AI Assurance OS has to be trained and designed around a compliance officer's actual questions rather than its underlying schema, and where the AI governance copilot earns its keep most during onboarding.",
+                "timestamp": "2026-07-27T21:24:47.764149",
+                "status": "draft",
+                "slug": "training-the-compliance-officer-on-the-tool",
+                "day": 2
+            },
+            {
+                "week": 5,
+                "topic": "Field note: High-risk is a workflow label, not a vibe",
+                "summary": "A plain introduction to why EU AI Act risk classification has to be a repeatable, documented workflow, and how mis-tiering silently skips controls like bias and fairness monitoring.",
+                "timestamp": "2026-07-27T21:33:54.801421",
+                "status": "draft",
+                "slug": "field-note-high-risk-is-a-workflow-label-not-a-vibe",
+                "day": 2
+            },
+            {
+                "week": 6,
+                "topic": "Field note: Dataset provenance in plain language",
+                "summary": "A plain introduction to why dataset provenance only becomes real governance once it automatically gates CI/CD deploys, and how the AI governance chat copilot makes the provenance chain fast to query.",
+                "timestamp": "2026-07-27T21:33:54.807701",
+                "status": "draft",
+                "slug": "field-note-dataset-provenance-in-plain-language",
+                "day": 2
+            },
+            {
+                "week": 7,
+                "topic": "Field note: Vendor models and shared responsibility",
+                "summary": "A plain introduction to why deploying a third-party model still requires your own high-risk classification and evidence export, because AI governance obligations attach to the deployer, not the vendor.",
+                "timestamp": "2026-07-27T22:07:15.750026",
+                "status": "draft",
+                "slug": "field-note-vendor-models-and-shared-responsibility",
+                "day": 2
+            },
+            {
+                "week": 8,
+                "topic": "Field note: Training the compliance officer on the tool",
+                "summary": "A plain introduction to why the non-repudiation audit ledger and bias/fairness monitoring must be trained as fundamentally different kinds of features -- integrity versus interpretation -- rather than both treated as similar 'flags.'",
+                "timestamp": "2026-07-27T22:07:15.759277",
+                "status": "draft",
+                "slug": "field-note-training-the-compliance-officer-on-the-tool",
+                "day": 2
+            },
+            {
+                "week": 9,
+                "topic": "A Monday explainer on High-risk is a workflow label, not a vibe",
+                "summary": "A plain Monday walkthrough of why high-risk classification has to be a repeatable workflow tied to real lineage evidence, enforced automatically by CI/CD gates instead of decided informally in a meeting.",
+                "timestamp": "2026-07-27T22:58:57.888958",
+                "status": "draft",
+                "slug": "a-monday-explainer-on-high-risk-is-a-workflow-label-not-a-vibe",
+                "day": 2
+            },
+            {
+                "week": 10,
+                "topic": "A Monday explainer on Dataset provenance in plain language",
+                "summary": "A plain Monday walkthrough of why dataset provenance is a versioned chain checked against a specific policy pack, and why evidence export exists to answer an auditor's real question directly.",
+                "timestamp": "2026-07-27T22:58:57.899625",
+                "status": "draft",
+                "slug": "a-monday-explainer-on-dataset-provenance-in-plain-language",
+                "day": 2
+            },
+            {
+                "week": 11,
+                "topic": "A Monday explainer on Vendor models and shared responsibility",
+                "summary": "A plain Monday walkthrough of why the deployer, not the vendor, carries the compliance burden for a third-party model, and how the governance copilot and non-repudiation ledger work together to prove diligence.",
+                "timestamp": "2026-07-27T22:58:57.910769",
+                "status": "draft",
+                "slug": "a-monday-explainer-on-vendor-models-and-shared-responsibility",
+                "day": 2
+            },
+            {
+                "week": 12,
+                "topic": "A Monday explainer on Training the compliance officer on the tool",
+                "summary": "A plain Monday walkthrough of why high-risk categorization must be taught as a decision-tree skill and model lineage as factual-record verification, without letting the two mental models collapse together.",
+                "timestamp": "2026-07-27T22:58:57.923609",
+                "status": "draft",
+                "slug": "a-monday-explainer-on-training-the-compliance-officer-on-the-tool",
+                "day": 2
+            }
+        ],
+        "workforceguard": [
+            {
+                "week": 1,
+                "topic": "Introducing WorkforceGuard without HR jargon soup",
+                "summary": "WorkforceGuard blends public EU labor-market data with a company's own payroll to answer pay-transparency exposure in plain language, backed by a shift-swap assistant that can refuse illegal swaps and a hash-chained governance log.",
+                "timestamp": "2026-07-27T21:13:17.938182",
+                "status": "draft",
+                "slug": "introducing-workforceguard-without-hr-jargon-soup",
+                "day": 3
+            },
+            {
+                "week": 2,
+                "topic": "Minimum wage across locations",
+                "summary": "Why a single national minimum wage number almost never reflects a multi-site employer's real compliance floor, and how WorkforceGuard turns Eurostat-scale sector and geography data into a location-by-location answer instead of a false company-wide score.",
+                "timestamp": "2026-07-27T21:13:17.942942",
+                "status": "draft",
+                "slug": "minimum-wage-across-locations",
+                "day": 3
+            },
+            {
+                "week": 3,
+                "topic": "Breaks that exist on paper only",
+                "summary": "Why a compliant break schedule doesn't mean a compliant break actually happened, and how WorkforceGuard's real-time rest-period tracking flags the gap between planned and actual breaks before it becomes a wage claim.",
+                "timestamp": "2026-07-27T21:24:47.760332",
+                "status": "draft",
+                "slug": "breaks-that-exist-on-paper-only",
+                "day": 3
+            },
+            {
+                "week": 4,
+                "topic": "Metrics that reduce grievances",
+                "summary": "Why login counts and usage stats are the wrong way to measure whether a scheduling tool works, and how WorkforceGuard's real metrics \u2014 violations prevented, grievance rate decline \u2014 reflect actual worker outcomes instead of vanity adoption numbers.",
+                "timestamp": "2026-07-27T21:24:47.765152",
+                "status": "draft",
+                "slug": "metrics-that-reduce-grievances",
+                "day": 3
+            },
+            {
+                "week": 5,
+                "topic": "Field note: Introducing WorkforceGuard without HR jargon soup",
+                "summary": "A plain-language introduction connecting clock-in exception handling to wage claim audit exports as the beginning and end of the same story: prevention, and what you need when prevention didn't happen in time.",
+                "timestamp": "2026-07-27T21:33:54.802581",
+                "status": "draft",
+                "slug": "field-note-introducing-workforceguard-without-hr-jargon-soup-2",
+                "day": 3
+            },
+            {
+                "week": 6,
+                "topic": "Field note: Minimum wage across locations",
+                "summary": "A plain introduction to why minimum wage compliance for a multi-site employer depends on which CBA governs a specific site and whether rest-period-affected hours were counted correctly against that layered floor.",
+                "timestamp": "2026-07-27T21:33:54.809237",
+                "status": "draft",
+                "slug": "field-note-minimum-wage-across-locations",
+                "day": 3
+            },
+            {
+                "week": 7,
+                "topic": "Field note: Breaks that exist on paper only",
+                "summary": "A plain introduction to why fair shift scheduling only guarantees a break is possible, not that it happened, and how missed breaks silently connect to overtime threshold miscalculations.",
+                "timestamp": "2026-07-27T22:07:15.752019",
+                "status": "draft",
+                "slug": "field-note-breaks-that-exist-on-paper-only",
+                "day": 3
+            },
+            {
+                "week": 8,
+                "topic": "Field note: Metrics that reduce grievances",
+                "summary": "A plain introduction to why a falling grievance rate is only trustworthy when it traces to real-time shift alerts and clock-in exception handling actually catching problems, not just a number moving in the right direction.",
+                "timestamp": "2026-07-27T22:07:15.761394",
+                "status": "draft",
+                "slug": "field-note-metrics-that-reduce-grievances",
+                "day": 3
+            },
+            {
+                "week": 9,
+                "topic": "A Monday explainer on Introducing WorkforceGuard without HR jargon soup",
+                "summary": "A plain Monday walkthrough of how WorkforceGuard's shift-swap assistant checks a routine swap request against rest rules and CBA constraints, refusing violations before they hit the roster.",
+                "timestamp": "2026-07-27T22:58:57.891144",
+                "status": "draft",
+                "slug": "a-monday-explainer-on-introducing-workforceguard-without-hr-jargon-soup",
+                "day": 3
+            },
+            {
+                "week": 10,
+                "topic": "A Monday explainer on Minimum wage across locations",
+                "summary": "A plain Monday walkthrough of why the fair shift scheduling engine and audit export both need to know the layered, site-specific wage floor rather than a single national minimum.",
+                "timestamp": "2026-07-27T22:58:57.901801",
+                "status": "draft",
+                "slug": "a-monday-explainer-on-minimum-wage-across-locations",
+                "day": 3
+            },
+            {
+                "week": 11,
+                "topic": "A Monday explainer on Breaks that exist on paper only",
+                "summary": "A plain Monday walkthrough of why CBA rules define what a compliant break actually means for a specific worker, and how real-time shift alerts catch a missed break against that specific definition while it's still fixable.",
+                "timestamp": "2026-07-27T22:58:57.913281",
+                "status": "draft",
+                "slug": "a-monday-explainer-on-breaks-that-exist-on-paper-only",
+                "day": 3
+            },
+            {
+                "week": 12,
+                "topic": "A Monday explainer on Metrics that reduce grievances",
+                "summary": "A plain Monday walkthrough of why a falling grievance rate is only trustworthy when it traces to overtime/wage enforcement and the shift-swap assistant actually catching problems before they happen.",
+                "timestamp": "2026-07-27T22:58:57.926364",
+                "status": "draft",
+                "slug": "a-monday-explainer-on-metrics-that-reduce-grievances",
+                "day": 3
+            }
+        ],
+        "aequitas": [
+            {
+                "week": 1,
+                "topic": "A corridor is a promise to the public",
+                "summary": "Aequitas turns geofenced transit corridors and open transit data into defensible equity metrics, backed by a dispatcher assistant that surfaces hazard signals without inventing numbers outside the pre-computed warehouse.",
+                "timestamp": "2026-07-27T21:13:17.939030",
+                "status": "draft",
+                "slug": "a-corridor-is-a-promise-to-the-public",
+                "day": 4
+            },
+            {
+                "week": 2,
+                "topic": "The near-miss that never entered a spreadsheet",
+                "summary": "Aequitas's hazard and weather overlays capture the dense, sparse-official-record layer of operational risk that lives only in drivers' heads until the dispatcher assistant can surface it while a vehicle is still en route.",
+                "timestamp": "2026-07-27T21:13:17.944338",
+                "status": "draft",
+                "slug": "the-near-miss-that-never-entered-a-spreadsheet",
+                "day": 4
+            },
+            {
+                "week": 3,
+                "topic": "Onboarding a new fleet's telematics",
+                "summary": "Why Aequitas pilots start with a minimum viable live layer on one corridor rather than a full telematics integration, and why historical collision heatmaps and driver scorecards deliberately come after the live layer proves itself.",
+                "timestamp": "2026-07-27T21:24:47.761176",
+                "status": "draft",
+                "slug": "onboarding-a-new-fleets-telematics",
+                "day": 4
+            },
+            {
+                "week": 4,
+                "topic": "Night service risk differs from peak commute",
+                "summary": "Why Aequitas treats night transit risk as a fundamentally different category from peak commute risk, and how the AI Route Safety Dispatcher shifts from congestion signals to isolation and fatigue signals depending on time of day.",
+                "timestamp": "2026-07-27T21:24:47.766217",
+                "status": "draft",
+                "slug": "night-service-risk-differs-from-peak-commute",
+                "day": 4
+            },
+            {
+                "week": 5,
+                "topic": "Field note: A corridor is a promise to the public",
+                "summary": "A plain introduction to why Aequitas treats a transit corridor as a contract, and how live GIS mapping and corridor-scoped emergency proximity alerts exist to verify whether that promise is being kept.",
+                "timestamp": "2026-07-27T21:33:54.803758",
+                "status": "draft",
+                "slug": "field-note-a-corridor-is-a-promise-to-the-public",
+                "day": 4
+            },
+            {
+                "week": 6,
+                "topic": "Field note: The near-miss that never entered a spreadsheet",
+                "summary": "A plain introduction to why near-misses need a geofenced corridor to become structured data, and why historical collision heatmaps need near-miss density as an earlier warning signal than collision counts alone.",
+                "timestamp": "2026-07-27T21:33:54.810603",
+                "status": "draft",
+                "slug": "field-note-the-near-miss-that-never-entered-a-spreadsheet",
+                "day": 4
+            },
+            {
+                "week": 7,
+                "topic": "Field note: Onboarding a new fleet's telematics",
+                "summary": "A plain introduction to why live vehicle positions are the easy part of a telematics pilot, while hazard overlays and fleet safety metrics need honest labeling until enough historical data accumulates to mean something.",
+                "timestamp": "2026-07-27T22:07:15.753627",
+                "status": "draft",
+                "slug": "field-note-onboarding-a-new-fleets-telematics",
+                "day": 4
+            },
+            {
+                "week": 8,
+                "topic": "Field note: Night service risk differs from peak commute",
+                "summary": "A plain introduction to why blended driver safety scorecards and time-agnostic emergency proximity alerts hide the real risk signal, and why both need peak-versus-night as a structural input from the start.",
+                "timestamp": "2026-07-27T22:07:15.763124",
+                "status": "draft",
+                "slug": "field-note-night-service-risk-differs-from-peak-commute",
+                "day": 4
+            },
+            {
+                "week": 9,
+                "topic": "A Monday explainer on A corridor is a promise to the public",
+                "summary": "A plain Monday walkthrough of why a geofenced corridor turns a route's implicit promise into something checkable, and how the AI route safety dispatcher reasons against that specific boundary.",
+                "timestamp": "2026-07-27T22:58:57.893256",
+                "status": "draft",
+                "slug": "a-monday-explainer-on-a-corridor-is-a-promise-to-the-public",
+                "day": 4
+            },
+            {
+                "week": 10,
+                "topic": "A Monday explainer on The near-miss that never entered a spreadsheet",
+                "summary": "A plain Monday walkthrough of why real-time GIS route mapping gives near-misses a location and hazard/weather overlays give them a place to accumulate into an earlier safety warning than collision counts alone.",
+                "timestamp": "2026-07-27T22:58:57.903866",
+                "status": "draft",
+                "slug": "a-monday-explainer-on-the-near-miss-that-never-entered-a-spreadsheet",
+                "day": 4
+            },
+            {
+                "week": 11,
+                "topic": "A Monday explainer on Onboarding a new fleet's telematics",
+                "summary": "A plain Monday walkthrough of why a fleet telematics pilot proves the live layer works quickly, while historical collision heatmaps and driver safety scorecards honestly need real time to accumulate meaningful data.",
+                "timestamp": "2026-07-27T22:58:57.915658",
+                "status": "draft",
+                "slug": "a-monday-explainer-on-onboarding-a-new-fleets-telematics",
+                "day": 4
+            },
+            {
+                "week": 12,
+                "topic": "A Monday explainer on Night service risk differs from peak commute",
+                "summary": "A plain Monday walkthrough of why vehicle fleet safety metrics and the AI route safety dispatcher both need peak-versus-night as a structural input rather than a single blended risk model.",
+                "timestamp": "2026-07-27T22:58:57.929104",
+                "status": "draft",
+                "slug": "a-monday-explainer-on-night-service-risk-differs-from-peak-commute",
+                "day": 4
+            }
+        ],
+        "meridian": [
+            {
+                "week": 1,
+                "topic": "Channels that lie if you sum them naively",
+                "summary": "Meridian prevents multi-channel revenue double-counting through tenant-scoped attribution, built and validated against synthetic data before live HubSpot integrations go live.",
+                "timestamp": "2026-07-27T21:13:17.939843",
+                "status": "draft",
+                "slug": "channels-that-lie-if-you-sum-them-naively",
+                "day": 5
+            },
+            {
+                "week": 2,
+                "topic": "Heatmaps for promo days",
+                "summary": "Why Meridian uses a real-time sales heatmap instead of daily totals to show exactly when and where promo-day demand concentrates, grounded in the same attribution pipeline that feeds its forecasting.",
+                "timestamp": "2026-07-27T21:13:17.946103",
+                "status": "draft",
+                "slug": "heatmaps-for-promo-days",
+                "day": 5
+            },
+            {
+                "week": 3,
+                "topic": "When the BI copilot should say 'it depends'",
+                "summary": "Why Meridian's BI copilot relies on a versioned definition registry to detect genuinely ambiguous questions like 'what's our margin' and ask for clarification instead of confidently picking one definition.",
+                "timestamp": "2026-07-27T21:24:47.762101",
+                "status": "draft",
+                "slug": "when-the-bi-copilot-should-say-it-depends",
+                "day": 5
+            },
+            {
+                "week": 4,
+                "topic": "Opening story: one SKU across three channels",
+                "summary": "A single SKU sold direct, marketplace, and wholesale reveals why Meridian's inventory stockout prediction and customer LTV models must be built on sell-through data rather than shipment data wherever reseller channels are involved.",
+                "timestamp": "2026-07-27T21:24:47.767228",
+                "status": "draft",
+                "slug": "opening-story-one-sku-across-three-channels",
+                "day": 5
+            },
+            {
+                "week": 5,
+                "topic": "Field note: Channels that lie if you sum them naively",
+                "summary": "A plain introduction to why naively summing multi-channel revenue overstates the truth, and why Meridian's attribution engine and forecasting must be built on attribution-corrected numbers rather than raw channel totals.",
+                "timestamp": "2026-07-27T21:33:54.805013",
+                "status": "draft",
+                "slug": "field-note-channels-that-lie-if-you-sum-them-naively",
+                "day": 5
+            },
+            {
+                "week": 6,
+                "topic": "Field note: Heatmaps for promo days",
+                "summary": "A plain introduction to why a real-time sales heatmap beats a next-day report during a promo day, and why raw unit-volume heatmaps can mislead unless read alongside margin and returns analytics.",
+                "timestamp": "2026-07-27T21:33:54.811998",
+                "status": "draft",
+                "slug": "field-note-heatmaps-for-promo-days",
+                "day": 5
+            },
+            {
+                "week": 7,
+                "topic": "Field note: When the BI copilot should say 'it depends'",
+                "summary": "A plain introduction to why an ambiguous stockout question deserves a complete answer across products and channels rather than a confident answer to one narrow, easiest-to-compute interpretation.",
+                "timestamp": "2026-07-27T22:07:15.755266",
+                "status": "draft",
+                "slug": "field-note-when-the-bi-copilot-should-say-it-depends",
+                "day": 5
+            },
+            {
+                "week": 8,
+                "topic": "Field note: Opening story: one SKU across three channels",
+                "summary": "A plain revisit of the single-SKU story showing why a definition registry has to make 'units sold' explicit across channels, and why unresolved definitions silently bias multi-channel forecasting toward overestimating demand.",
+                "timestamp": "2026-07-27T22:07:15.764849",
+                "status": "draft",
+                "slug": "field-note-opening-story-one-sku-across-three-channels",
+                "day": 5
+            },
+            {
+                "week": 9,
+                "topic": "A Monday explainer on Channels that lie if you sum them naively",
+                "summary": "A plain Monday walkthrough of why naive channel summing corrupts both total revenue and customer LTV, and how a real-time sales heatmap makes the cross-channel overlap visible before it's resolved.",
+                "timestamp": "2026-07-27T22:58:57.895374",
+                "status": "draft",
+                "slug": "a-monday-explainer-on-channels-that-lie-if-you-sum-them-naively",
+                "day": 5
+            },
+            {
+                "week": 10,
+                "topic": "A Monday explainer on Heatmaps for promo days",
+                "summary": "A plain Monday walkthrough of why a promo-day sales heatmap needs real attribution to be trustworthy, and how the BI copilot turns it into something an inventory manager can question directly.",
+                "timestamp": "2026-07-27T22:58:57.906322",
+                "status": "draft",
+                "slug": "a-monday-explainer-on-heatmaps-for-promo-days",
+                "day": 5
+            },
+            {
+                "week": 11,
+                "topic": "A Monday explainer on When the BI copilot should say 'it depends'",
+                "summary": "A plain Monday walkthrough of why margin and returns analytics is a genuinely ambiguous domain, and how the definition registry lets the copilot recognize ambiguity instead of confidently guessing.",
+                "timestamp": "2026-07-27T22:58:57.918170",
+                "status": "draft",
+                "slug": "a-monday-explainer-on-when-the-bi-copilot-should-say-it-depends",
+                "day": 5
+            },
+            {
+                "week": 12,
+                "topic": "A Monday explainer on Opening story: one SKU across three channels",
+                "summary": "A plain Monday walkthrough of the single-SKU story showing why both inventory stockout prediction and customer LTV need sell-through data instead of shipment data wherever wholesale channels are involved.",
+                "timestamp": "2026-07-27T22:58:57.931682",
+                "status": "draft",
+                "slug": "a-monday-explainer-on-opening-story-one-sku-across-three-channels",
+                "day": 5
+            }
+        ],
+        "evident": []
+    },
+    "posts": {
+        "week_1_day_1": {
+            "week": 1,
+            "day": 1,
+            "project_key": "masova",
+            "topic": "Why Restaurants Still Lose Tickets at Rush (And How I Replaced Paper with a Unified Queue)",
+            "summary": "A look at how paper tickets and siloed delivery tablets break down during kitchen rushes, and how I built MaSoVa to unify POS, aggregator, and fiscal queues into a single real-time Kitchen Display System.",
+            "slug": "why-restaurants-still-lose-tickets-at-rush-and-how-i-replaced-paper-with-a-unifi",
+            "status": "approved",
+            "folder": "/Users/souravamseekarmarti/Projects/social-poster/posts/week_1/day_1_masova",
+            "updated_at": "2026-08-04T07:32:03.920641",
+            "quality_flags": [
+                "possible_corporate_we"
+            ],
+            "created_at": "2026-07-25T15:18:26.246969"
+        },
+        "week_1_day_2": {
+            "week": 1,
+            "day": 2,
+            "project_key": "eu-ai-assurance",
+            "topic": "High-Risk Is a Workflow Label, Not a Vibe",
+            "summary": "How EU AI Assurance OS turns risk-tier classification from an informal judgment call into a repeatable workflow tied to a control catalog and a tamper-evident audit ledger.",
+            "slug": "high-risk-is-a-workflow-label-not-a-vibe",
+            "status": "draft",
+            "folder": "/Users/souravamseekarmarti/Projects/social-poster/posts/week_1/day_2_eu-ai-assurance",
+            "updated_at": "2026-07-27T21:13:17.936689",
+            "quality_flags": [],
+            "created_at": "2026-07-27T21:13:17.936689"
+        },
+        "week_1_day_3": {
+            "week": 1,
+            "day": 3,
+            "project_key": "workforceguard",
+            "topic": "Introducing WorkforceGuard Without HR Jargon Soup",
+            "summary": "WorkforceGuard blends public EU labor-market data with a company's own payroll to answer pay-transparency exposure in plain language, backed by a shift-swap assistant that can refuse illegal swaps and a hash-chained governance log.",
+            "slug": "introducing-workforceguard-without-hr-jargon-soup",
+            "status": "draft",
+            "folder": "/Users/souravamseekarmarti/Projects/social-poster/posts/week_1/day_3_workforceguard",
+            "updated_at": "2026-07-27T21:13:17.937823",
+            "quality_flags": [
+                "possible_corporate_we"
+            ],
+            "created_at": "2026-07-27T21:13:17.937823"
+        },
+        "week_1_day_4": {
+            "week": 1,
+            "day": 4,
+            "project_key": "aequitas",
+            "topic": "A Corridor Is a Promise to the Public",
+            "summary": "Aequitas turns geofenced transit corridors and open transit data into defensible equity metrics, backed by a dispatcher assistant that surfaces hazard signals without inventing numbers outside the pre-computed warehouse.",
+            "slug": "a-corridor-is-a-promise-to-the-public",
+            "status": "draft",
+            "folder": "/Users/souravamseekarmarti/Projects/social-poster/posts/week_1/day_4_aequitas",
+            "updated_at": "2026-07-27T21:13:17.938644",
+            "quality_flags": [],
+            "created_at": "2026-07-27T21:13:17.938644"
+        },
+        "week_1_day_5": {
+            "week": 1,
+            "day": 5,
+            "project_key": "meridian",
+            "topic": "Channels That Lie If You Sum Them Naively",
+            "summary": "Meridian prevents multi-channel revenue double-counting through tenant-scoped attribution, built and validated against synthetic data before live HubSpot integrations go live.",
+            "slug": "channels-that-lie-if-you-sum-them-naively",
+            "status": "draft",
+            "folder": "/Users/souravamseekarmarti/Projects/social-poster/posts/week_1/day_5_meridian",
+            "updated_at": "2026-07-27T21:13:17.939471",
+            "quality_flags": [],
+            "created_at": "2026-07-27T21:13:17.939471"
+        },
+        "week_2_day_1": {
+            "week": 2,
+            "day": 1,
+            "project_key": "masova",
+            "topic": "Kitchen Display as an Operations Tool, Not a Gadget",
+            "summary": "MaSoVa's KDS is built for station routing and prep-time coordination, not to look modern \u2014 and the configuration burden it places on non-technical managers is still the biggest open gap.",
+            "slug": "kitchen-display-as-an-operations-tool-not-a-gadget",
+            "status": "draft",
+            "folder": "/Users/souravamseekarmarti/Projects/social-poster/posts/week_2/day_1_masova",
+            "updated_at": "2026-07-27T21:13:17.940293",
+            "quality_flags": [],
+            "created_at": "2026-07-27T21:13:17.940293"
+        },
+        "week_2_day_2": {
+            "week": 2,
+            "day": 2,
+            "project_key": "eu-ai-assurance",
+            "topic": "Dataset Provenance in Plain Language",
+            "summary": "Why dataset provenance has to be tracked as a structural, versioned chain tied to the model registry rather than a spreadsheet, and what an auditor is actually asking when they question a model's training data.",
+            "slug": "dataset-provenance-in-plain-language",
+            "status": "draft",
+            "folder": "/Users/souravamseekarmarti/Projects/social-poster/posts/week_2/day_2_eu-ai-assurance",
+            "updated_at": "2026-07-27T21:13:17.941184",
+            "quality_flags": [
+                "possible_corporate_we"
+            ],
+            "created_at": "2026-07-27T21:13:17.941184"
+        },
+        "week_2_day_3": {
+            "week": 2,
+            "day": 3,
+            "project_key": "workforceguard",
+            "topic": "Minimum Wage Across Locations",
+            "summary": "Why a single national minimum wage number almost never reflects a multi-site employer's real compliance floor, and how WorkforceGuard turns Eurostat-scale sector and geography data into a location-by-location answer instead of a false company-wide score.",
+            "slug": "minimum-wage-across-locations",
+            "status": "draft",
+            "folder": "/Users/souravamseekarmarti/Projects/social-poster/posts/week_2/day_3_workforceguard",
+            "updated_at": "2026-07-27T21:13:17.942286",
+            "quality_flags": [],
+            "created_at": "2026-07-27T21:13:17.942286"
+        },
+        "week_2_day_4": {
+            "week": 2,
+            "day": 4,
+            "project_key": "aequitas",
+            "topic": "The Near-Miss That Never Entered a Spreadsheet",
+            "summary": "Aequitas's hazard and weather overlays capture the dense, sparse-official-record layer of operational risk that lives only in drivers' heads until the dispatcher assistant can surface it while a vehicle is still en route.",
+            "slug": "the-near-miss-that-never-entered-a-spreadsheet",
+            "status": "draft",
+            "folder": "/Users/souravamseekarmarti/Projects/social-poster/posts/week_2/day_4_aequitas",
+            "updated_at": "2026-07-27T21:13:17.943680",
+            "quality_flags": [],
+            "created_at": "2026-07-27T21:13:17.943680"
+        },
+        "week_2_day_5": {
+            "week": 2,
+            "day": 5,
+            "project_key": "meridian",
+            "topic": "Heatmaps for Promo Days",
+            "summary": "Why Meridian uses a real-time sales heatmap instead of daily totals to show exactly when and where promo-day demand concentrates, grounded in the same attribution pipeline that feeds its forecasting.",
+            "slug": "heatmaps-for-promo-days",
+            "status": "draft",
+            "folder": "/Users/souravamseekarmarti/Projects/social-poster/posts/week_2/day_5_meridian",
+            "updated_at": "2026-07-27T21:13:17.945416",
+            "quality_flags": [],
+            "created_at": "2026-07-27T21:13:17.945416"
+        },
+        "week_3_day_1": {
+            "week": 3,
+            "day": 1,
+            "project_key": "masova",
+            "topic": "Delivery Tablets That Ignore Your Kitchen",
+            "summary": "How MaSoVa's third-party order sync pulls aggregator orders into the same kitchen queue as POS tickets, and why the allergen assistant's job stays narrowly scoped to flagging conflicts, not deciding what to cook.",
+            "slug": "delivery-tablets-that-ignore-your-kitchen",
+            "status": "draft",
+            "folder": "/Users/souravamseekarmarti/Projects/social-poster/posts/week_3/day_1_masova",
+            "updated_at": "2026-07-27T21:24:47.757865",
+            "quality_flags": [],
+            "created_at": "2026-07-27T21:24:47.757865"
+        },
+        "week_3_day_2": {
+            "week": 3,
+            "day": 2,
+            "project_key": "eu-ai-assurance",
+            "topic": "Vendor Models and Shared Responsibility",
+            "summary": "Why using a third-party foundation model doesn't hand off EU AI Act obligations to the vendor, and how EU AI Assurance OS keeps a non-repudiable audit trail on vendor-model deployments just as it would for a self-trained model.",
+            "slug": "vendor-models-and-shared-responsibility",
+            "status": "draft",
+            "folder": "/Users/souravamseekarmarti/Projects/social-poster/posts/week_3/day_2_eu-ai-assurance",
+            "updated_at": "2026-07-27T21:24:47.759111",
+            "quality_flags": [
+                "possible_corporate_we"
+            ],
+            "created_at": "2026-07-27T21:24:47.759111"
+        },
+        "week_3_day_3": {
+            "week": 3,
+            "day": 3,
+            "project_key": "workforceguard",
+            "topic": "Breaks That Exist on Paper Only",
+            "summary": "Why a compliant break schedule doesn't mean a compliant break actually happened, and how WorkforceGuard's real-time rest-period tracking flags the gap between planned and actual breaks before it becomes a wage claim.",
+            "slug": "breaks-that-exist-on-paper-only",
+            "status": "draft",
+            "folder": "/Users/souravamseekarmarti/Projects/social-poster/posts/week_3/day_3_workforceguard",
+            "updated_at": "2026-07-27T21:24:47.759936",
+            "quality_flags": [],
+            "created_at": "2026-07-27T21:24:47.759936"
+        },
+        "week_3_day_4": {
+            "week": 3,
+            "day": 4,
+            "project_key": "aequitas",
+            "topic": "Onboarding a New Fleet's Telematics",
+            "summary": "Why Aequitas pilots start with a minimum viable live layer on one corridor rather than a full telematics integration, and why historical collision heatmaps and driver scorecards deliberately come after the live layer proves itself.",
+            "slug": "onboarding-a-new-fleets-telematics",
+            "status": "draft",
+            "folder": "/Users/souravamseekarmarti/Projects/social-poster/posts/week_3/day_4_aequitas",
+            "updated_at": "2026-07-27T21:24:47.760766",
+            "quality_flags": [],
+            "created_at": "2026-07-27T21:24:47.760766"
+        },
+        "week_3_day_5": {
+            "week": 3,
+            "day": 5,
+            "project_key": "meridian",
+            "topic": "When the BI Copilot Should Say 'It Depends'",
+            "summary": "Why Meridian's BI copilot relies on a versioned definition registry to detect genuinely ambiguous questions like 'what's our margin' and ask for clarification instead of confidently picking one definition.",
+            "slug": "when-the-bi-copilot-should-say-it-depends",
+            "status": "draft",
+            "folder": "/Users/souravamseekarmarti/Projects/social-poster/posts/week_3/day_5_meridian",
+            "updated_at": "2026-07-27T21:24:47.761643",
+            "quality_flags": [],
+            "created_at": "2026-07-27T21:24:47.761643"
+        },
+        "week_4_day_1": {
+            "week": 4,
+            "day": 1,
+            "project_key": "masova",
+            "topic": "Multi-Location Chains vs Single Site Pain",
+            "summary": "Why multi-location restaurant operations don't create harder domain problems than a single site, just less visibility for the owner, and how MaSoVa's tenant isolation and manager override auditing replace what used to be the owner's physical presence.",
+            "slug": "multi-location-chains-vs-single-site-pain",
+            "status": "draft",
+            "folder": "/Users/souravamseekarmarti/Projects/social-poster/posts/week_4/day_1_masova",
+            "updated_at": "2026-07-27T21:24:47.762679",
+            "quality_flags": [],
+            "created_at": "2026-07-27T21:24:47.762679"
+        },
+        "week_4_day_2": {
+            "week": 4,
+            "day": 2,
+            "project_key": "eu-ai-assurance",
+            "topic": "Training the Compliance Officer on the Tool",
+            "summary": "Why EU AI Assurance OS has to be trained and designed around a compliance officer's actual questions rather than its underlying schema, and where the AI governance copilot earns its keep most during onboarding.",
+            "slug": "training-the-compliance-officer-on-the-tool",
+            "status": "draft",
+            "folder": "/Users/souravamseekarmarti/Projects/social-poster/posts/week_4/day_2_eu-ai-assurance",
+            "updated_at": "2026-07-27T21:24:47.763640",
+            "quality_flags": [],
+            "created_at": "2026-07-27T21:24:47.763640"
+        },
+        "week_4_day_3": {
+            "week": 4,
+            "day": 3,
+            "project_key": "workforceguard",
+            "topic": "Metrics That Reduce Grievances",
+            "summary": "Why login counts and usage stats are the wrong way to measure whether a scheduling tool works, and how WorkforceGuard's real metrics \u2014 violations prevented, grievance rate decline \u2014 reflect actual worker outcomes instead of vanity adoption numbers.",
+            "slug": "metrics-that-reduce-grievances",
+            "status": "draft",
+            "folder": "/Users/souravamseekarmarti/Projects/social-poster/posts/week_4/day_3_workforceguard",
+            "updated_at": "2026-07-27T21:24:47.764697",
+            "quality_flags": [],
+            "created_at": "2026-07-27T21:24:47.764697"
+        },
+        "week_4_day_4": {
+            "week": 4,
+            "day": 4,
+            "project_key": "aequitas",
+            "topic": "Night Service Risk Differs From Peak Commute",
+            "summary": "Why Aequitas treats night transit risk as a fundamentally different category from peak commute risk, and how the AI Route Safety Dispatcher shifts from congestion signals to isolation and fatigue signals depending on time of day.",
+            "slug": "night-service-risk-differs-from-peak-commute",
+            "status": "draft",
+            "folder": "/Users/souravamseekarmarti/Projects/social-poster/posts/week_4/day_4_aequitas",
+            "updated_at": "2026-07-27T21:24:47.765736",
+            "quality_flags": [],
+            "created_at": "2026-07-27T21:24:47.765736"
+        },
+        "week_4_day_5": {
+            "week": 4,
+            "day": 5,
+            "project_key": "meridian",
+            "topic": "Opening Story: One SKU Across Three Channels",
+            "summary": "A single SKU sold direct, marketplace, and wholesale reveals why Meridian's inventory stockout prediction and customer LTV models must be built on sell-through data rather than shipment data wherever reseller channels are involved.",
+            "slug": "opening-story-one-sku-across-three-channels",
+            "status": "draft",
+            "folder": "/Users/souravamseekarmarti/Projects/social-poster/posts/week_4/day_5_meridian",
+            "updated_at": "2026-07-27T21:24:47.766739",
+            "quality_flags": [],
+            "created_at": "2026-07-27T21:24:47.766739"
+        },
+        "week_5_day_1": {
+            "week": 5,
+            "day": 1,
+            "project_key": "masova",
+            "topic": "Field Note: Why Restaurants Still Lose Tickets at Rush",
+            "summary": "A plain-language introduction to why unifying order sources, not just digitizing the kitchen display, is what actually fixes lost tickets during a rush.",
+            "slug": "field-note-why-restaurants-still-lose-tickets-at-rush",
+            "status": "draft",
+            "folder": "/Users/souravamseekarmarti/Projects/social-poster/posts/week_5/day_1_masova",
+            "updated_at": "2026-07-27T21:33:54.799232",
+            "quality_flags": [
+                "possible_corporate_we"
+            ],
+            "created_at": "2026-07-27T21:33:54.799232"
+        },
+        "week_5_day_2": {
+            "week": 5,
+            "day": 2,
+            "project_key": "eu-ai-assurance",
+            "topic": "Field Note: High-Risk Is a Workflow Label, Not a Vibe",
+            "summary": "A plain introduction to why EU AI Act risk classification has to be a repeatable, documented workflow, and how mis-tiering silently skips controls like bias and fairness monitoring.",
+            "slug": "field-note-high-risk-is-a-workflow-label-not-a-vibe",
+            "status": "draft",
+            "folder": "/Users/souravamseekarmarti/Projects/social-poster/posts/week_5/day_2_eu-ai-assurance",
+            "updated_at": "2026-07-27T21:33:54.800864",
+            "quality_flags": [],
+            "created_at": "2026-07-27T21:33:54.800864"
+        },
+        "week_5_day_3": {
+            "week": 5,
+            "day": 3,
+            "project_key": "workforceguard",
+            "topic": "Field Note: Introducing WorkforceGuard Without HR Jargon Soup",
+            "summary": "A plain-language introduction connecting clock-in exception handling to wage claim audit exports as the beginning and end of the same story: prevention, and what you need when prevention didn't happen in time.",
+            "slug": "field-note-introducing-workforceguard-without-hr-jargon-soup-2",
+            "status": "draft",
+            "folder": "/Users/souravamseekarmarti/Projects/social-poster/posts/week_5/day_3_workforceguard",
+            "updated_at": "2026-07-27T21:33:54.802028",
+            "quality_flags": [],
+            "created_at": "2026-07-27T21:33:54.802028"
+        },
+        "week_5_day_4": {
+            "week": 5,
+            "day": 4,
+            "project_key": "aequitas",
+            "topic": "Field Note: A Corridor Is a Promise to the Public",
+            "summary": "A plain introduction to why Aequitas treats a transit corridor as a contract, and how live GIS mapping and corridor-scoped emergency proximity alerts exist to verify whether that promise is being kept.",
+            "slug": "field-note-a-corridor-is-a-promise-to-the-public",
+            "status": "draft",
+            "folder": "/Users/souravamseekarmarti/Projects/social-poster/posts/week_5/day_4_aequitas",
+            "updated_at": "2026-07-27T21:33:54.803203",
+            "quality_flags": [],
+            "created_at": "2026-07-27T21:33:54.803203"
+        },
+        "week_5_day_5": {
+            "week": 5,
+            "day": 5,
+            "project_key": "meridian",
+            "topic": "Field Note: Channels That Lie If You Sum Them Naively",
+            "summary": "A plain introduction to why naively summing multi-channel revenue overstates the truth, and why Meridian's attribution engine and forecasting must be built on attribution-corrected numbers rather than raw channel totals.",
+            "slug": "field-note-channels-that-lie-if-you-sum-them-naively",
+            "status": "draft",
+            "folder": "/Users/souravamseekarmarti/Projects/social-poster/posts/week_5/day_5_meridian",
+            "updated_at": "2026-07-27T21:33:54.804375",
+            "quality_flags": [],
+            "created_at": "2026-07-27T21:33:54.804375"
+        },
+        "week_6_day_1": {
+            "week": 6,
+            "day": 1,
+            "project_key": "masova",
+            "topic": "Field Note: Kitchen Display as an Operations Tool, Not a Gadget",
+            "summary": "A plain introduction to why MaSoVa's Kitchen Display System depends on unifying every order source and running fiscal signing on a separate track, so the screen never lags during a rush.",
+            "slug": "field-note-kitchen-display-as-an-operations-tool-not-a-gadget",
+            "status": "draft",
+            "folder": "/Users/souravamseekarmarti/Projects/social-poster/posts/week_6/day_1_masova",
+            "updated_at": "2026-07-27T21:33:54.805705",
+            "quality_flags": [],
+            "created_at": "2026-07-27T21:33:54.805705"
+        },
+        "week_6_day_2": {
+            "week": 6,
+            "day": 2,
+            "project_key": "eu-ai-assurance",
+            "topic": "Field Note: Dataset Provenance in Plain Language",
+            "summary": "A plain introduction to why dataset provenance only becomes real governance once it automatically gates CI/CD deploys, and how the AI governance chat copilot makes the provenance chain fast to query.",
+            "slug": "field-note-dataset-provenance-in-plain-language",
+            "status": "draft",
+            "folder": "/Users/souravamseekarmarti/Projects/social-poster/posts/week_6/day_2_eu-ai-assurance",
+            "updated_at": "2026-07-27T21:33:54.807060",
+            "quality_flags": [
+                "possible_corporate_we"
+            ],
+            "created_at": "2026-07-27T21:33:54.807060"
+        },
+        "week_6_day_3": {
+            "week": 6,
+            "day": 3,
+            "project_key": "workforceguard",
+            "topic": "Field Note: Minimum Wage Across Locations",
+            "summary": "A plain introduction to why minimum wage compliance for a multi-site employer depends on which CBA governs a specific site and whether rest-period-affected hours were counted correctly against that layered floor.",
+            "slug": "field-note-minimum-wage-across-locations",
+            "status": "draft",
+            "folder": "/Users/souravamseekarmarti/Projects/social-poster/posts/week_6/day_3_workforceguard",
+            "updated_at": "2026-07-27T21:33:54.808539",
+            "quality_flags": [],
+            "created_at": "2026-07-27T21:33:54.808539"
+        },
+        "week_6_day_4": {
+            "week": 6,
+            "day": 4,
+            "project_key": "aequitas",
+            "topic": "Field Note: The Near-Miss That Never Entered a Spreadsheet",
+            "summary": "A plain introduction to why near-misses need a geofenced corridor to become structured data, and why historical collision heatmaps need near-miss density as an earlier warning signal than collision counts alone.",
+            "slug": "field-note-the-near-miss-that-never-entered-a-spreadsheet",
+            "status": "draft",
+            "folder": "/Users/souravamseekarmarti/Projects/social-poster/posts/week_6/day_4_aequitas",
+            "updated_at": "2026-07-27T21:33:54.809929",
+            "quality_flags": [
+                "possible_corporate_we"
+            ],
+            "created_at": "2026-07-27T21:33:54.809929"
+        },
+        "week_6_day_5": {
+            "week": 6,
+            "day": 5,
+            "project_key": "meridian",
+            "topic": "Field Note: Heatmaps for Promo Days",
+            "summary": "A plain introduction to why a real-time sales heatmap beats a next-day report during a promo day, and why raw unit-volume heatmaps can mislead unless read alongside margin and returns analytics.",
+            "slug": "field-note-heatmaps-for-promo-days",
+            "status": "draft",
+            "folder": "/Users/souravamseekarmarti/Projects/social-poster/posts/week_6/day_5_meridian",
+            "updated_at": "2026-07-27T21:33:54.811328",
+            "quality_flags": [],
+            "created_at": "2026-07-27T21:33:54.811328"
+        },
+        "week_7_day_1": {
+            "week": 7,
+            "day": 1,
+            "project_key": "masova",
+            "topic": "Field Note: Delivery Tablets That Ignore Your Kitchen",
+            "summary": "A plain introduction to why unifying aggregator orders onto one screen is only half the fix, and how station routing and manager override auditing are where the real value shows up afterward.",
+            "slug": "field-note-delivery-tablets-that-ignore-your-kitchen",
+            "status": "draft",
+            "folder": "/Users/souravamseekarmarti/Projects/social-poster/posts/week_7/day_1_masova",
+            "updated_at": "2026-07-27T22:07:15.747090",
+            "quality_flags": [],
+            "created_at": "2026-07-27T22:07:15.747090"
+        },
+        "week_7_day_2": {
+            "week": 7,
+            "day": 2,
+            "project_key": "eu-ai-assurance",
+            "topic": "Field Note: Vendor Models and Shared Responsibility",
+            "summary": "A plain introduction to why deploying a third-party model still requires your own high-risk classification and evidence export, because AI governance obligations attach to the deployer, not the vendor.",
+            "slug": "field-note-vendor-models-and-shared-responsibility",
+            "status": "draft",
+            "folder": "/Users/souravamseekarmarti/Projects/social-poster/posts/week_7/day_2_eu-ai-assurance",
+            "updated_at": "2026-07-27T22:07:15.749224",
+            "quality_flags": [
+                "possible_corporate_we"
+            ],
+            "created_at": "2026-07-27T22:07:15.749224"
+        },
+        "week_7_day_3": {
+            "week": 7,
+            "day": 3,
+            "project_key": "workforceguard",
+            "topic": "Field Note: Breaks That Exist on Paper Only",
+            "summary": "A plain introduction to why fair shift scheduling only guarantees a break is possible, not that it happened, and how missed breaks silently connect to overtime threshold miscalculations.",
+            "slug": "field-note-breaks-that-exist-on-paper-only",
+            "status": "draft",
+            "folder": "/Users/souravamseekarmarti/Projects/social-poster/posts/week_7/day_3_workforceguard",
+            "updated_at": "2026-07-27T22:07:15.751237",
+            "quality_flags": [],
+            "created_at": "2026-07-27T22:07:15.751237"
+        },
+        "week_7_day_4": {
+            "week": 7,
+            "day": 4,
+            "project_key": "aequitas",
+            "topic": "Field Note: Onboarding a New Fleet's Telematics",
+            "summary": "A plain introduction to why live vehicle positions are the easy part of a telematics pilot, while hazard overlays and fleet safety metrics need honest labeling until enough historical data accumulates to mean something.",
+            "slug": "field-note-onboarding-a-new-fleets-telematics",
+            "status": "draft",
+            "folder": "/Users/souravamseekarmarti/Projects/social-poster/posts/week_7/day_4_aequitas",
+            "updated_at": "2026-07-27T22:07:15.752851",
+            "quality_flags": [],
+            "created_at": "2026-07-27T22:07:15.752851"
+        },
+        "week_7_day_5": {
+            "week": 7,
+            "day": 5,
+            "project_key": "meridian",
+            "topic": "Field Note: When the BI Copilot Should Say 'It Depends'",
+            "summary": "A plain introduction to why an ambiguous stockout question deserves a complete answer across products and channels rather than a confident answer to one narrow, easiest-to-compute interpretation.",
+            "slug": "field-note-when-the-bi-copilot-should-say-it-depends",
+            "status": "draft",
+            "folder": "/Users/souravamseekarmarti/Projects/social-poster/posts/week_7/day_5_meridian",
+            "updated_at": "2026-07-27T22:07:15.754454",
+            "quality_flags": [
+                "possible_corporate_we"
+            ],
+            "created_at": "2026-07-27T22:07:15.754454"
+        },
+        "week_8_day_1": {
+            "week": 8,
+            "day": 1,
+            "project_key": "masova",
+            "topic": "Field Note: Multi-Location Chains vs Single Site Pain",
+            "summary": "A plain introduction to why scaling from one restaurant site to several multiplies the places where reality can diverge from assumed data, and why the AI allergen assistant and recipe costing need accurate per-location data to stay meaningful.",
+            "slug": "field-note-multi-location-chains-vs-single-site-pain",
+            "status": "draft",
+            "folder": "/Users/souravamseekarmarti/Projects/social-poster/posts/week_8/day_1_masova",
+            "updated_at": "2026-07-27T22:07:15.756102",
+            "quality_flags": [],
+            "created_at": "2026-07-27T22:07:15.756102"
+        },
+        "week_8_day_2": {
+            "week": 8,
+            "day": 2,
+            "project_key": "eu-ai-assurance",
+            "topic": "Field Note: Training the Compliance Officer on the Tool",
+            "summary": "A plain introduction to why the non-repudiation audit ledger and bias/fairness monitoring must be trained as fundamentally different kinds of features -- integrity versus interpretation -- rather than both treated as similar 'flags.'",
+            "slug": "field-note-training-the-compliance-officer-on-the-tool",
+            "status": "draft",
+            "folder": "/Users/souravamseekarmarti/Projects/social-poster/posts/week_8/day_2_eu-ai-assurance",
+            "updated_at": "2026-07-27T22:07:15.757978",
+            "quality_flags": [],
+            "created_at": "2026-07-27T22:07:15.757978"
+        },
+        "week_8_day_3": {
+            "week": 8,
+            "day": 3,
+            "project_key": "workforceguard",
+            "topic": "Field Note: Metrics That Reduce Grievances",
+            "summary": "A plain introduction to why a falling grievance rate is only trustworthy when it traces to real-time shift alerts and clock-in exception handling actually catching problems, not just a number moving in the right direction.",
+            "slug": "field-note-metrics-that-reduce-grievances",
+            "status": "draft",
+            "folder": "/Users/souravamseekarmarti/Projects/social-poster/posts/week_8/day_3_workforceguard",
+            "updated_at": "2026-07-27T22:07:15.760455",
+            "quality_flags": [],
+            "created_at": "2026-07-27T22:07:15.760455"
+        },
+        "week_8_day_4": {
+            "week": 8,
+            "day": 4,
+            "project_key": "aequitas",
+            "topic": "Field Note: Night Service Risk Differs From Peak Commute",
+            "summary": "A plain introduction to why blended driver safety scorecards and time-agnostic emergency proximity alerts hide the real risk signal, and why both need peak-versus-night as a structural input from the start.",
+            "slug": "field-note-night-service-risk-differs-from-peak-commute",
+            "status": "draft",
+            "folder": "/Users/souravamseekarmarti/Projects/social-poster/posts/week_8/day_4_aequitas",
+            "updated_at": "2026-07-27T22:07:15.762285",
+            "quality_flags": [],
+            "created_at": "2026-07-27T22:07:15.762285"
+        },
+        "week_8_day_5": {
+            "week": 8,
+            "day": 5,
+            "project_key": "meridian",
+            "topic": "Field Note: Opening Story: One SKU Across Three Channels",
+            "summary": "A plain revisit of the single-SKU story showing why a definition registry has to make 'units sold' explicit across channels, and why unresolved definitions silently bias multi-channel forecasting toward overestimating demand.",
+            "slug": "field-note-opening-story-one-sku-across-three-channels",
+            "status": "draft",
+            "folder": "/Users/souravamseekarmarti/Projects/social-poster/posts/week_8/day_5_meridian",
+            "updated_at": "2026-07-27T22:07:15.764011",
+            "quality_flags": [],
+            "created_at": "2026-07-27T22:07:15.764011"
+        },
+        "week_9_day_1": {
+            "week": 9,
+            "day": 1,
+            "project_key": "masova",
+            "topic": "A Monday Explainer on Why Restaurants Still Lose Tickets at Rush",
+            "summary": "A plain Monday-morning walkthrough of why kitchens still lose orders during a rush, and why MaSoVa's KDS has to run fiscal signing on a separate track to stay instant.",
+            "slug": "a-monday-explainer-on-why-restaurants-still-lose-tickets-at-rush",
+            "status": "draft",
+            "folder": "/Users/souravamseekarmarti/Projects/social-poster/posts/week_9/day_1_masova",
+            "updated_at": "2026-07-27T22:58:57.885649",
+            "quality_flags": [
+                "possible_corporate_we"
+            ],
+            "created_at": "2026-07-27T22:58:57.885649"
+        },
+        "week_9_day_2": {
+            "week": 9,
+            "day": 2,
+            "project_key": "eu-ai-assurance",
+            "topic": "A Monday Explainer on High-Risk Is a Workflow Label, Not a Vibe",
+            "summary": "A plain Monday walkthrough of why high-risk classification has to be a repeatable workflow tied to real lineage evidence, enforced automatically by CI/CD gates instead of decided informally in a meeting.",
+            "slug": "a-monday-explainer-on-high-risk-is-a-workflow-label-not-a-vibe",
+            "status": "draft",
+            "folder": "/Users/souravamseekarmarti/Projects/social-poster/posts/week_9/day_2_eu-ai-assurance",
+            "updated_at": "2026-07-27T22:58:57.888054",
+            "quality_flags": [],
+            "created_at": "2026-07-27T22:58:57.888054"
+        },
+        "week_9_day_3": {
+            "week": 9,
+            "day": 3,
+            "project_key": "workforceguard",
+            "topic": "A Monday Explainer on Introducing WorkforceGuard Without HR Jargon Soup",
+            "summary": "A plain Monday walkthrough of how WorkforceGuard's shift-swap assistant checks a routine swap request against rest rules and CBA constraints, refusing violations before they hit the roster.",
+            "slug": "a-monday-explainer-on-introducing-workforceguard-without-hr-jargon-soup",
+            "status": "draft",
+            "folder": "/Users/souravamseekarmarti/Projects/social-poster/posts/week_9/day_3_workforceguard",
+            "updated_at": "2026-07-27T22:58:57.889949",
+            "quality_flags": [],
+            "created_at": "2026-07-27T22:58:57.889949"
+        },
+        "week_9_day_4": {
+            "week": 9,
+            "day": 4,
+            "project_key": "aequitas",
+            "topic": "A Monday Explainer on A Corridor Is a Promise to the Public",
+            "summary": "A plain Monday walkthrough of why a geofenced corridor turns a route's implicit promise into something checkable, and how the AI route safety dispatcher reasons against that specific boundary.",
+            "slug": "a-monday-explainer-on-a-corridor-is-a-promise-to-the-public",
+            "status": "draft",
+            "folder": "/Users/souravamseekarmarti/Projects/social-poster/posts/week_9/day_4_aequitas",
+            "updated_at": "2026-07-27T22:58:57.892185",
+            "quality_flags": [],
+            "created_at": "2026-07-27T22:58:57.892185"
+        },
+        "week_9_day_5": {
+            "week": 9,
+            "day": 5,
+            "project_key": "meridian",
+            "topic": "A Monday Explainer on Channels That Lie If You Sum Them Naively",
+            "summary": "A plain Monday walkthrough of why naive channel summing corrupts both total revenue and customer LTV, and how a real-time sales heatmap makes the cross-channel overlap visible before it's resolved.",
+            "slug": "a-monday-explainer-on-channels-that-lie-if-you-sum-them-naively",
+            "status": "draft",
+            "folder": "/Users/souravamseekarmarti/Projects/social-poster/posts/week_9/day_5_meridian",
+            "updated_at": "2026-07-27T22:58:57.894245",
+            "quality_flags": [],
+            "created_at": "2026-07-27T22:58:57.894245"
+        },
+        "week_10_day_1": {
+            "week": 10,
+            "day": 1,
+            "project_key": "masova",
+            "topic": "A Monday Explainer on Kitchen Display as an Operations Tool, Not a Gadget",
+            "summary": "A plain Monday walkthrough of why a Kitchen Display System's real value is station routing and prep timing, and why tableside ordering has to feed the same unified queue to avoid recreating the old chaos.",
+            "slug": "a-monday-explainer-on-kitchen-display-as-an-operations-tool-not-a-gadget",
+            "status": "draft",
+            "folder": "/Users/souravamseekarmarti/Projects/social-poster/posts/week_10/day_1_masova",
+            "updated_at": "2026-07-27T22:58:57.896387",
+            "quality_flags": [],
+            "created_at": "2026-07-27T22:58:57.896387"
+        },
+        "week_10_day_2": {
+            "week": 10,
+            "day": 2,
+            "project_key": "eu-ai-assurance",
+            "topic": "A Monday Explainer on Dataset Provenance in Plain Language",
+            "summary": "A plain Monday walkthrough of why dataset provenance is a versioned chain checked against a specific policy pack, and why evidence export exists to answer an auditor's real question directly.",
+            "slug": "a-monday-explainer-on-dataset-provenance-in-plain-language",
+            "status": "draft",
+            "folder": "/Users/souravamseekarmarti/Projects/social-poster/posts/week_10/day_2_eu-ai-assurance",
+            "updated_at": "2026-07-27T22:58:57.898571",
+            "quality_flags": [
+                "possible_corporate_we"
+            ],
+            "created_at": "2026-07-27T22:58:57.898571"
+        },
+        "week_10_day_3": {
+            "week": 10,
+            "day": 3,
+            "project_key": "workforceguard",
+            "topic": "A Monday Explainer on Minimum Wage Across Locations",
+            "summary": "A plain Monday walkthrough of why the fair shift scheduling engine and audit export both need to know the layered, site-specific wage floor rather than a single national minimum.",
+            "slug": "a-monday-explainer-on-minimum-wage-across-locations",
+            "status": "draft",
+            "folder": "/Users/souravamseekarmarti/Projects/social-poster/posts/week_10/day_3_workforceguard",
+            "updated_at": "2026-07-27T22:58:57.900687",
+            "quality_flags": [
+                "possible_corporate_we"
+            ],
+            "created_at": "2026-07-27T22:58:57.900687"
+        },
+        "week_10_day_4": {
+            "week": 10,
+            "day": 4,
+            "project_key": "aequitas",
+            "topic": "A Monday Explainer on The Near-Miss That Never Entered a Spreadsheet",
+            "summary": "A plain Monday walkthrough of why real-time GIS route mapping gives near-misses a location and hazard/weather overlays give them a place to accumulate into an earlier safety warning than collision counts alone.",
+            "slug": "a-monday-explainer-on-the-near-miss-that-never-entered-a-spreadsheet",
+            "status": "draft",
+            "folder": "/Users/souravamseekarmarti/Projects/social-poster/posts/week_10/day_4_aequitas",
+            "updated_at": "2026-07-27T22:58:57.902847",
+            "quality_flags": [
+                "possible_corporate_we"
+            ],
+            "created_at": "2026-07-27T22:58:57.902847"
+        },
+        "week_10_day_5": {
+            "week": 10,
+            "day": 5,
+            "project_key": "meridian",
+            "topic": "A Monday Explainer on Heatmaps for Promo Days",
+            "summary": "A plain Monday walkthrough of why a promo-day sales heatmap needs real attribution to be trustworthy, and how the BI copilot turns it into something an inventory manager can question directly.",
+            "slug": "a-monday-explainer-on-heatmaps-for-promo-days",
+            "status": "draft",
+            "folder": "/Users/souravamseekarmarti/Projects/social-poster/posts/week_10/day_5_meridian",
+            "updated_at": "2026-07-27T22:58:57.904944",
+            "quality_flags": [],
+            "created_at": "2026-07-27T22:58:57.904944"
+        },
+        "week_11_day_1": {
+            "week": 11,
+            "day": 1,
+            "project_key": "masova",
+            "topic": "A Monday Explainer on Delivery Tablets That Ignore Your Kitchen",
+            "summary": "A plain Monday walkthrough of how third-party order sync unifies aggregator orders into MaSoVa's pipeline, and why the AI allergen assistant depends on that unification to protect delivery customers.",
+            "slug": "a-monday-explainer-on-delivery-tablets-that-ignore-your-kitchen",
+            "status": "draft",
+            "folder": "/Users/souravamseekarmarti/Projects/social-poster/posts/week_11/day_1_masova",
+            "updated_at": "2026-07-27T22:58:57.907491",
+            "quality_flags": [],
+            "created_at": "2026-07-27T22:58:57.907491"
+        },
+        "week_11_day_2": {
+            "week": 11,
+            "day": 2,
+            "project_key": "eu-ai-assurance",
+            "topic": "A Monday Explainer on Vendor Models and Shared Responsibility",
+            "summary": "A plain Monday walkthrough of why the deployer, not the vendor, carries the compliance burden for a third-party model, and how the governance copilot and non-repudiation ledger work together to prove diligence.",
+            "slug": "a-monday-explainer-on-vendor-models-and-shared-responsibility",
+            "status": "draft",
+            "folder": "/Users/souravamseekarmarti/Projects/social-poster/posts/week_11/day_2_eu-ai-assurance",
+            "updated_at": "2026-07-27T22:58:57.909688",
+            "quality_flags": [
+                "possible_corporate_we"
+            ],
+            "created_at": "2026-07-27T22:58:57.909688"
+        },
+        "week_11_day_3": {
+            "week": 11,
+            "day": 3,
+            "project_key": "workforceguard",
+            "topic": "A Monday Explainer on Breaks That Exist on Paper Only",
+            "summary": "A plain Monday walkthrough of why CBA rules define what a compliant break actually means for a specific worker, and how real-time shift alerts catch a missed break against that specific definition while it's still fixable.",
+            "slug": "a-monday-explainer-on-breaks-that-exist-on-paper-only",
+            "status": "draft",
+            "folder": "/Users/souravamseekarmarti/Projects/social-poster/posts/week_11/day_3_workforceguard",
+            "updated_at": "2026-07-27T22:58:57.911870",
+            "quality_flags": [],
+            "created_at": "2026-07-27T22:58:57.911870"
+        },
+        "week_11_day_4": {
+            "week": 11,
+            "day": 4,
+            "project_key": "aequitas",
+            "topic": "A Monday Explainer on Onboarding a New Fleet's Telematics",
+            "summary": "A plain Monday walkthrough of why a fleet telematics pilot proves the live layer works quickly, while historical collision heatmaps and driver safety scorecards honestly need real time to accumulate meaningful data.",
+            "slug": "a-monday-explainer-on-onboarding-a-new-fleets-telematics",
+            "status": "draft",
+            "folder": "/Users/souravamseekarmarti/Projects/social-poster/posts/week_11/day_4_aequitas",
+            "updated_at": "2026-07-27T22:58:57.914512",
+            "quality_flags": [],
+            "created_at": "2026-07-27T22:58:57.914512"
+        },
+        "week_11_day_5": {
+            "week": 11,
+            "day": 5,
+            "project_key": "meridian",
+            "topic": "A Monday Explainer on When the BI Copilot Should Say 'It Depends'",
+            "summary": "A plain Monday walkthrough of why margin and returns analytics is a genuinely ambiguous domain, and how the definition registry lets the copilot recognize ambiguity instead of confidently guessing.",
+            "slug": "a-monday-explainer-on-when-the-bi-copilot-should-say-it-depends",
+            "status": "draft",
+            "folder": "/Users/souravamseekarmarti/Projects/social-poster/posts/week_11/day_5_meridian",
+            "updated_at": "2026-07-27T22:58:57.916814",
+            "quality_flags": [],
+            "created_at": "2026-07-27T22:58:57.916814"
+        },
+        "week_12_day_1": {
+            "week": 12,
+            "day": 1,
+            "project_key": "masova",
+            "topic": "A Monday Explainer on Multi-Location Chains vs Single Site Pain",
+            "summary": "A plain Monday walkthrough of why multi-location restaurant operations need manager override auditing to replace the physical presence an owner used to provide at a single site.",
+            "slug": "a-monday-explainer-on-multi-location-chains-vs-single-site-pain",
+            "status": "draft",
+            "folder": "/Users/souravamseekarmarti/Projects/social-poster/posts/week_12/day_1_masova",
+            "updated_at": "2026-07-27T22:58:57.919326",
+            "quality_flags": [],
+            "created_at": "2026-07-27T22:58:57.919326"
+        },
+        "week_12_day_2": {
+            "week": 12,
+            "day": 2,
+            "project_key": "eu-ai-assurance",
+            "topic": "A Monday Explainer on Training the Compliance Officer on the Tool",
+            "summary": "A plain Monday walkthrough of why high-risk categorization must be taught as a decision-tree skill and model lineage as factual-record verification, without letting the two mental models collapse together.",
+            "slug": "a-monday-explainer-on-training-the-compliance-officer-on-the-tool",
+            "status": "draft",
+            "folder": "/Users/souravamseekarmarti/Projects/social-poster/posts/week_12/day_2_eu-ai-assurance",
+            "updated_at": "2026-07-27T22:58:57.921637",
+            "quality_flags": [],
+            "created_at": "2026-07-27T22:58:57.921637"
+        },
+        "week_12_day_3": {
+            "week": 12,
+            "day": 3,
+            "project_key": "workforceguard",
+            "topic": "A Monday Explainer on Metrics That Reduce Grievances",
+            "summary": "A plain Monday walkthrough of why a falling grievance rate is only trustworthy when it traces to overtime/wage enforcement and the shift-swap assistant actually catching problems before they happen.",
+            "slug": "a-monday-explainer-on-metrics-that-reduce-grievances",
+            "status": "draft",
+            "folder": "/Users/souravamseekarmarti/Projects/social-poster/posts/week_12/day_3_workforceguard",
+            "updated_at": "2026-07-27T22:58:57.925051",
+            "quality_flags": [],
+            "created_at": "2026-07-27T22:58:57.925051"
+        },
+        "week_12_day_4": {
+            "week": 12,
+            "day": 4,
+            "project_key": "aequitas",
+            "topic": "A Monday Explainer on Night Service Risk Differs From Peak Commute",
+            "summary": "A plain Monday walkthrough of why vehicle fleet safety metrics and the AI route safety dispatcher both need peak-versus-night as a structural input rather than a single blended risk model.",
+            "slug": "a-monday-explainer-on-night-service-risk-differs-from-peak-commute",
+            "status": "draft",
+            "folder": "/Users/souravamseekarmarti/Projects/social-poster/posts/week_12/day_4_aequitas",
+            "updated_at": "2026-07-27T22:58:57.927661",
+            "quality_flags": [],
+            "created_at": "2026-07-27T22:58:57.927661"
+        },
+        "week_12_day_5": {
+            "week": 12,
+            "day": 5,
+            "project_key": "meridian",
+            "topic": "A Monday Explainer on Opening Story: One SKU Across Three Channels",
+            "summary": "A plain Monday walkthrough of the single-SKU story showing why both inventory stockout prediction and customer LTV need sell-through data instead of shipment data wherever wholesale channels are involved.",
+            "slug": "a-monday-explainer-on-opening-story-one-sku-across-three-channels",
+            "status": "draft",
+            "folder": "/Users/souravamseekarmarti/Projects/social-poster/posts/week_12/day_5_meridian",
+            "updated_at": "2026-07-27T22:58:57.930466",
+            "quality_flags": [],
+            "created_at": "2026-07-27T22:58:57.930466"
+        }
+    }
+}
