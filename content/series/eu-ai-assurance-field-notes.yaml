@@ -1,0 +1,12 @@
+id: eu-ai-assurance-field-notes
+title: EU AI Assurance Field Notes
+description: >-
+  Engineering notes on wiring EU AI Act risk classification, lineage, and
+  release gates into real pipelines — without compliance-by-conversation.
+coverImage: ""
+projects:
+  - eu-ai-assurance
+audience: Compliance officers, ML platform, and DevSecOps teams
+prerequisites: None — each field note stands alone
+recommendedOrder:
+  - high-risk-is-a-workflow-label-not-a-meeting-vibe
