@@ -44,7 +44,8 @@ export const releases: Release[] = [
     publishedAt: "2026-07-01",
     badge: "Debut",
     project: "workforceguard",
-    // shortVideo: "XXXXXXXXXXX",
+    /** Short: https://youtu.be/o9iGJcX7rWc */
+    shortVideo: "o9iGJcX7rWc",
     // podcast: "https://open.spotify.com/episode/...",
     // podcastLabel: "Spotify",
     longVideo: "IexegJZcKmI",
