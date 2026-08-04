@@ -1,0 +1,90 @@
+{
+  "title": "Why Managers Still Lose the Dinner Rush on Three Tablets",
+  "slug": "why-managers-still-lose-the-dinner-rush-on-three-tablets",
+  "summary": "An engineering field note detailing how MaSoVa unifies fragmented POS and delivery aggregator workflows using an append-only local SQLite ledger, tenant isolation, and a manager-approved demand forecasting agent.",
+  "project_key": "masova",
+  "week": 1,
+  "day": 1,
+  "status": "published",
+  "curriculum_topic": "Why Managers Still Lose the Dinner Rush on Three Tablets",
+  "topic_meta": {
+    "day": 1,
+    "title": "Why restaurants still lose tickets at rush",
+    "domain_focus": "Paper tickets and split POS/delivery screens create dropped orders when volume spikes. Always re-introduce the system briefly: MaSoVa is a multi-tenant restaurant OS that unifies POS tickets, kitchen display, delivery aggregator orders, and fiscal-safe ledgers so the line is not drowning in paper. Users in focus: restaurant managers, head chefs, line cooks, delivery partners, fiscal auditors.",
+    "level": "Basic",
+    "curriculum_stage": "Basic",
+    "key_features": [
+      "Kitchen Display System (KDS)",
+      "Fiscal Tax Ledger (KassenSichV/NF525)"
+    ],
+    "has_ai_agent": false,
+    "project_key": "masova"
+  },
+  "quality_flags": [
+    "possible_corporate_we"
+  ],
+  "generated_at": "2026-07-25T15:40:33.571814",
+  "dry_run": false,
+  "editorial_applied": true,
+  "editorial_item_ids": [
+    "d250639f4a"
+  ],
+  "blog_title": "Deconstructing Ticket Loss: Why Synchronous Fiscal APIs Fail Kitchens at Peak Load",
+  "rewrite_pass": "pov-features-ai-v2",
+  "rewrite_checks": {
+    "humble_voice": true,
+    "has_mechanism": true,
+    "has_cta": true,
+    "series_label": true,
+    "no_pride_arc": true,
+    "platform_fit": true
+  },
+  "cta": {
+    "blog": "https://blog.souravamseekar.com/why-managers-still-lose-the-dinner-rush-on-three-tablets",
+    "landing": "https://masova.souravamseekar.com",
+    "demo": "https://masova.souravamseekar.com",
+    "repo": "https://github.com/SVamseekar/masova-platform",
+    "contact": "https://souravamseekar.com",
+    "portfolio": "https://souravamseekar.com",
+    "portfolio_repo": "https://github.com/SVamseekar/martisouravamseekar-portfolio"
+  },
+  "link_normalize_pass": "cta-v3-canonical-urls",
+  "hashtags": {
+    "linkedin": [
+      "#Compliance",
+      "#RestaurantTech",
+      "#Hospitality",
+      "#FoodService",
+      "#KitchenDisplay"
+    ],
+    "x": [
+      "#RestaurantTech",
+      "#buildinpublic",
+      "#Hospitality"
+    ],
+    "devto": [
+      "webdev",
+      "architecture",
+      "opensource",
+      "productivity"
+    ],
+    "blog": [
+      "compliance",
+      "restauranttech",
+      "hospitality",
+      "foodservice",
+      "kitchendisplay"
+    ]
+  },
+  "hashtag_pass": "catalog-v1",
+  "feature_focus": [
+    "Manager dashboard (revenue, channel mix, inventory, AI insights)",
+    "Multi-store isolation (menu, staff, analytics per location)",
+    "Unified order truth (POS + aggregator normalisation)"
+  ],
+  "ai_trace": "demand forecast agent",
+  "series": "MaSoVa Ops Notes",
+  "pov": "restaurant manager / multi-unit owner (ease of running the house \u2014 not line-cook KDS hero stories)",
+  "title_align_pass": "all-projects-v1",
+  "updated_at": "2026-08-04T06:53:16.022691"
+}
