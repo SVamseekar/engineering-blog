@@ -1,4 +1,5 @@
 MaSoVa Ops
+
 Why do multi-unit restaurant managers still struggle with tablet pile-ups and lost delivery tickets during a Friday rush?
 
 When in-house POS terminals and third-party delivery aggregators operate on isolated state engines, network hiccups and synchronous API calls create dangerous order discrepancies between the front of house and the kitchen.
