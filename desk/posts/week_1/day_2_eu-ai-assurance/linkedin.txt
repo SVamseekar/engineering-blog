@@ -1,4 +1,4 @@
-EU AI Assurance Field notes · field note
+EU AI Assurance 
 
 Classifying an AI system's risk tier under the EU AI Act shouldn't be an informal negotiation between engineering and legal over a Slack thread.
 
