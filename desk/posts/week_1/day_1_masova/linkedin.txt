@@ -1,0 +1,14 @@
+MaSoVa Ops
+Why do multi-unit restaurant managers still struggle with tablet pile-ups and lost delivery tickets during a Friday rush?
+
+When in-house POS terminals and third-party delivery aggregators operate on isolated state engines, network hiccups and synchronous API calls create dangerous order discrepancies between the front of house and the kitchen.
+
+Inside MaSoVa, our multi-tenant restaurant OS tackles this by combining an append-only local SQLite ledger with a unified order normalization pipeline. Inbound transactions write instantly to local storage—moving from RECEIVED to LOCALLY_QUEUED without blocking on cloud confirmation—while a centralized manager dashboard aggregates revenue, channel mix, and inventory in real time.
+
+To assist with prep planning without risking automated errors, our demand forecast agent analyzes historical sales data to surface item-level prep suggestions strictly for manager review and approval.
+
+How do you currently handle multi-channel order reconciliation during peak hours?
+
+Links (write-up, product, repo) in the first comment.
+
+#Compliance #RestaurantTech #Hospitality #FoodService #KitchenDisplay
