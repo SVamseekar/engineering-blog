@@ -1,0 +1,86 @@
+{
+  "title": "High-Risk Is a Workflow Label, Not a Meeting Vibe",
+  "slug": "high-risk-is-a-workflow-label-not-a-meeting-vibe",
+  "summary": "An architectural field note on replacing informal compliance reviews with deterministic risk state machines, assisted RAG evidence gathering, and hash-chained audit ledgers in EU AI Assurance OS.",
+  "project_key": "eu-ai-assurance",
+  "week": 1,
+  "day": 2,
+  "status": "draft",
+  "curriculum_topic": "High-Risk Is a Workflow Label, Not a Meeting Vibe",
+  "topic_meta": {
+    "day": 2,
+    "title": "High-risk is a workflow label, not a vibe",
+    "domain_focus": "How I map use-case + data to risk tiers operators understand. Always re-introduce the system briefly: EU AI Assurance OS is a gatekeeper and audit ledger for high-risk AI systems: classify risk, prove lineage, block bad deploys, and answer auditors without spreadsheet archaeology. Users in focus: compliance officers, AI engineers, legal auditors, DevSecOps teams.",
+    "level": "Basic",
+    "curriculum_stage": "Basic",
+    "key_features": [
+      "Model Lineage & Dataset Provenance",
+      "Automated CI/CD Compliance Gates"
+    ],
+    "has_ai_agent": false,
+    "project_key": "eu-ai-assurance"
+  },
+  "quality_flags": [],
+  "generated_at": "2026-07-27T00:00:00",
+  "dry_run": false,
+  "editorial_applied": false,
+  "editorial_item_ids": [],
+  "blog_title": "High-Risk Is a Workflow Label, Not a Vibe: Engineering Repeatable AI Risk Classification",
+  "rewrite_pass": "pov-features-ai-v2",
+  "rewrite_checks": {
+    "humble_voice": true,
+    "has_mechanism": true,
+    "has_cta": true,
+    "series_label": true,
+    "no_pride_arc": true,
+    "platform_fit": true
+  },
+  "cta": {
+    "blog": "https://blog.souravamseekar.com/high-risk-is-a-workflow-label-not-a-meeting-vibe",
+    "landing": "https://euassuranceai.souravamseekar.com",
+    "demo": "https://euassuranceai.souravamseekar.com",
+    "repo": "https://github.com/SVamseekar/eu-ai-assurance-os",
+    "contact": "https://souravamseekar.com",
+    "portfolio": "https://souravamseekar.com",
+    "portfolio_repo": "https://github.com/SVamseekar/martisouravamseekar-portfolio"
+  },
+  "link_normalize_pass": "cta-v3-canonical-urls",
+  "hashtags": {
+    "linkedin": [
+      "#Compliance",
+      "#EUAIAct",
+      "#AIGovernance",
+      "#MLOps",
+      "#ResponsibleAI"
+    ],
+    "x": [
+      "#EUAIAct",
+      "#AIGovernance",
+      "#MLOps"
+    ],
+    "devto": [
+      "ai",
+      "machinelearning",
+      "security",
+      "devops"
+    ],
+    "blog": [
+      "compliance",
+      "euaiact",
+      "aigovernance",
+      "mlops",
+      "responsibleai"
+    ]
+  },
+  "hashtag_pass": "catalog-v1",
+  "feature_focus": [
+    "AI system registry + guided risk tier (MINIMAL/LIMITED/HIGH/PROHIBITED)",
+    "Control catalog + system-control status tracking",
+    "Cited compliance evidence RAG (embeddings + pgvector)"
+  ],
+  "ai_trace": "evidence RAG over control library",
+  "series": "EU AI Assurance Field Notes",
+  "pov": "AI governance / ML platform lead wiring compliance into the release path",
+  "title_align_pass": "all-projects-v1",
+  "updated_at": "2026-08-04T14:48:02.135203"
+}
