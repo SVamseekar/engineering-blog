@@ -1,0 +1,6 @@
+Full write-up: https://blog.souravamseekar.com/training-compliance-officers-on-the-control-plane
+Product / demo: https://euassuranceai.souravamseekar.com
+Source: https://github.com/SVamseekar/eu-ai-assurance-os
+Portfolio: https://souravamseekar.com
+
+Context: Training Compliance Officers on the Control Plane
