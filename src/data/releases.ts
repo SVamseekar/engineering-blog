@@ -1,63 +1,55 @@
 /**
- * Content OS release unit — always three surfaces for one idea:
- *
- *   1. Short video  (YouTube Short / vertical clip)
- *   2. Podcast      (long audio — Spotify, Apple, RSS, YouTube long-form, etc.)
- *   3. Blog post    (canonical written note on this site)
- *
- * Add a row here when any leg ships; fill the rest as they go live.
- * articleSlug must match frontmatter `slug` on the blog post.
+ * Content OS release unit — short + podcast + blog.
+ * Source of truth: content/glasshouse/releases.json (desk publishes here).
  */
+import fs from "fs";
+import path from "path";
+
 export type Release = {
-  /** Stable id for keys (kebab-case) */
   id: string;
   title: string;
   description?: string;
-  /** ISO date of the release cluster */
   publishedAt?: string;
   badge?: string;
-  /** Product line key e.g. workforceguard, eu-ai-assurance */
   project?: string;
-
-  /** YouTube Short id or full URL */
-  shortVideo?: string;
-  /** Podcast episode URL (Spotify / Apple / RSS / YouTube full episode) */
-  podcast?: string;
-  /** Optional label for podcast platform */
-  podcastLabel?: string;
-  /** Optional long-form video (not the short) if podcast is audio-only */
-  longVideo?: string;
-
-  /** Companion article slug on this blog */
-  articleSlug?: string;
+  shortVideo?: string | null;
+  podcast?: string | null;
+  podcastLabel?: string | null;
+  longVideo?: string | null;
+  articleSlug?: string | null;
+  coverImage?: string | null;
 };
 
-/**
- * Newest first. Example debut — fill short + podcast URLs when you have them.
- */
-export const releases: Release[] = [
-  {
-    id: "uncapped-liability-eu-pay-transparency",
-    title: "Uncapped Liability: The Math & Law Behind EU Pay Transparency",
-    description:
-      "Debut of The Compliance Glasshouse — is your pay software a compliance tool or audit evidence?",
-    publishedAt: "2026-07-01",
-    badge: "Debut",
-    project: "workforceguard",
-    /** Short: https://youtu.be/o9iGJcX7rWc */
-    shortVideo: "o9iGJcX7rWc",
-    // podcast: "https://open.spotify.com/episode/...",
-    // podcastLabel: "Spotify",
-    longVideo: "IexegJZcKmI",
-    // articleSlug: "uncapped-liability-eu-pay-transparency",
-  },
-];
+function loadReleases(): Release[] {
+  const candidates = [
+    path.join(process.cwd(), "content/glasshouse/releases.json"),
+    path.join(process.cwd(), "src/data/releases.fallback.json"),
+  ];
+  for (const p of candidates) {
+    try {
+      if (fs.existsSync(p)) {
+        const raw = JSON.parse(fs.readFileSync(p, "utf8"));
+        if (Array.isArray(raw)) return raw as Release[];
+      }
+    } catch {
+      /* try next */
+    }
+  }
+  return [];
+}
+
+export const releases: Release[] = loadReleases();
 
 export function releaseForArticle(slug: string): Release | undefined {
   return releases.find((r) => r.articleSlug === slug);
 }
 
+export function glasshouseReleases(): Release[] {
+  return releases;
+}
+
 export function youtubeWatchUrl(idOrUrl: string): string {
+  if (!idOrUrl) return "";
   if (/^[\w-]{11}$/.test(idOrUrl)) {
     return `https://www.youtube.com/watch?v=${idOrUrl}`;
   }
@@ -65,6 +57,7 @@ export function youtubeWatchUrl(idOrUrl: string): string {
 }
 
 export function youtubeVideoId(idOrUrl: string): string {
+  if (!idOrUrl) return "";
   if (/^[\w-]{11}$/.test(idOrUrl)) return idOrUrl;
   try {
     const u = new URL(idOrUrl);
@@ -77,11 +70,22 @@ export function youtubeVideoId(idOrUrl: string): string {
 
 export function youtubeThumb(idOrUrl: string): string {
   const id = youtubeVideoId(idOrUrl);
-  return `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
+  return id ? `https://i.ytimg.com/vi/${id}/hqdefault.jpg` : "";
 }
 
-/** Best thumbnail for a release card */
 export function releaseThumb(r: Release): string | null {
-  const vid = r.shortVideo || r.longVideo;
-  return vid ? youtubeThumb(vid) : null;
+  const vid = r.shortVideo || r.longVideo || r.podcast;
+  if (!vid) return r.coverImage || null;
+  // coverImage for blog art; prefer video thumb for play tiles
+  const t = youtubeThumb(vid);
+  return t || r.coverImage || null;
+}
+
+/** Normalize podcast field: YouTube id → watch URL for outbound links */
+export function podcastHref(r: Release): string | undefined {
+  if (!r.podcast) return undefined;
+  const p = r.podcast;
+  if (p.startsWith("http")) return p;
+  if (/^[\w-]{11}$/.test(p)) return youtubeWatchUrl(p);
+  return p;
 }

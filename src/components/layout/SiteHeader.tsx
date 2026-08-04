@@ -23,8 +23,11 @@ export function SiteHeader({ searchDocs }: { searchDocs: SearchDoc[] }) {
           <Link href="/projects" className="hover:text-[var(--fg)]">
             Projects
           </Link>
+          <Link href="/glasshouse" className="hover:text-[var(--fg)]">
+            Glasshouse
+          </Link>
           <Link href="/videos" className="hover:text-[var(--fg)]">
-            Videos
+            Releases
           </Link>
           <Link href="/topics" className="hover:text-[var(--fg)]">
             Topics

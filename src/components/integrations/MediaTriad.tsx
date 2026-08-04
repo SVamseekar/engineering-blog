@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Headphones, FileText, Clapperboard, Play } from "lucide-react";
 import { YouTubeFacade } from "@/components/integrations/YouTubeFacade";
 import type { Release } from "@/data/releases";
-import { youtubeWatchUrl } from "@/data/releases";
+import { youtubeWatchUrl, youtubeVideoId } from "@/data/releases";
 
 type MediaTriadProps = {
   /** From post frontmatter and/or releases catalog */
@@ -28,10 +28,39 @@ export function MediaTriad({
   youtube = [],
   title,
 }: MediaTriadProps) {
+  // Podcast may be a YouTube id (common for Glasshouse) or Spotify/Apple URL
+  const podcastIsYt =
+    Boolean(podcast) &&
+    (/^[\w-]{11}$/.test(podcast!) ||
+      (podcast!.includes("youtu") && Boolean(youtubeVideoId(podcast!))));
+  const podcastYtId = podcastIsYt
+    ? /^[\w-]{11}$/.test(podcast!)
+      ? podcast!
+      : youtubeVideoId(podcast!)
+    : null;
+  const podcastLink =
+    podcast &&
+    (podcast.startsWith("http")
+      ? podcast
+      : podcastIsYt
+        ? youtubeWatchUrl(podcastYtId || podcast)
+        : podcast);
+
   const longIds = [
     ...(longVideo ? [longVideo] : []),
-    ...youtube.filter((y) => y && y !== shortVideo && y !== longVideo),
+    ...youtube.filter(
+      (y) =>
+        y &&
+        y !== shortVideo &&
+        y !== longVideo &&
+        y !== podcast &&
+        y !== podcastYtId
+    ),
   ];
+  // If podcast is YouTube and no separate longVideo, embed it as podcast episode
+  if (podcastYtId && !longIds.includes(podcastYtId) && podcastYtId !== shortVideo) {
+    // shown under podcast embed section below
+  }
 
   const hasAny = shortVideo || podcast || longIds.length > 0;
   if (!hasAny) return null;
@@ -42,13 +71,13 @@ export function MediaTriad({
       aria-label="Watch, listen, read"
     >
       <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[var(--accent)]">
-        Same idea · three formats
+        The Compliance Glasshouse
       </p>
       <h2 className="mt-1 font-display text-xl text-[var(--fg)]">
         Short · Podcast · Written note
       </h2>
       <p className="mt-1 text-sm text-[var(--muted)]">
-        Pick the surface that fits — the engineering story is the same.
+        Same idea in three formats — pick the surface that fits.
       </p>
 
       <ul className="mt-5 grid gap-3 sm:grid-cols-3">
@@ -65,10 +94,10 @@ export function MediaTriad({
           icon={<Headphones className="h-4 w-4" />}
           label={podcastLabel}
           status={podcast ? "ready" : "soon"}
-          href={podcast}
+          href={podcastLink || undefined}
           external
         >
-          {podcast ? `Listen on ${podcastLabel}` : "Podcast coming soon"}
+          {podcast ? `Open ${podcastLabel}` : "Podcast coming soon"}
         </Leg>
         <Leg
           icon={<FileText className="h-4 w-4" />}
@@ -86,14 +115,28 @@ export function MediaTriad({
         </div>
       ) : null}
 
-      {longIds.map((id) => (
-        <div key={id} className="mt-6">
+      {podcastYtId ? (
+        <div className="mt-6">
           <p className="mb-2 text-xs font-medium text-[var(--muted)]">
-            Full episode / video
+            Podcast episode
           </p>
-          <YouTubeFacade id={id} title={title} />
+          <YouTubeFacade
+            id={podcastYtId}
+            title={title ? `${title} (podcast)` : "Podcast"}
+          />
         </div>
-      ))}
+      ) : null}
+
+      {longIds
+        .filter((id) => id !== podcastYtId)
+        .map((id) => (
+          <div key={id} className="mt-6">
+            <p className="mb-2 text-xs font-medium text-[var(--muted)]">
+              Full episode / video
+            </p>
+            <YouTubeFacade id={id} title={title} />
+          </div>
+        ))}
     </section>
   );
 }
@@ -175,10 +218,11 @@ export function mediaFromPostAndRelease(
   release?: Release
 ): MediaTriadProps {
   return {
-    shortVideo: post.youtubeShort || release?.shortVideo,
-    podcast: post.podcast || release?.podcast,
-    podcastLabel: post.podcastLabel || release?.podcastLabel || "Podcast",
-    longVideo: release?.longVideo,
+    shortVideo: post.youtubeShort || release?.shortVideo || undefined,
+    podcast: post.podcast || release?.podcast || undefined,
+    podcastLabel:
+      post.podcastLabel || release?.podcastLabel || "Podcast" || undefined,
+    longVideo: release?.longVideo || undefined,
     youtube: post.youtube,
     title: post.title || release?.title,
   };

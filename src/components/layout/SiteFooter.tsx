@@ -57,7 +57,10 @@ export function SiteFooter() {
               </a>
             </li>
             <li>
-              <Link href="/videos">Channel videos</Link>
+              <Link href="/glasshouse">The Compliance Glasshouse</Link>
+            </li>
+            <li>
+              <Link href="/videos">All releases</Link>
             </li>
             <li>
               <Link href="/rss.xml">RSS</Link>

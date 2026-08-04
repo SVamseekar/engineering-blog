@@ -41,6 +41,14 @@ export const projects: ProjectEntry[] = [
     tagline: "Multi-channel commercial analytics and defendable revenue numbers",
     color: "#db2777",
   },
+  {
+    id: "glasshouse",
+    name: "The Compliance Glasshouse",
+    tagline:
+      "Short · podcast · written note — engineering meets legal mandates",
+    url: "https://www.youtube.com/channel/UCnZQlhyFXJbWn6e6vjm3INA",
+    color: "#0f766e",
+  },
 ];
 
 export function getProject(id: string): ProjectEntry | undefined {

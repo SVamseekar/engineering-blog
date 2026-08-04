@@ -1,0 +1,12 @@
+id: compliance-glasshouse
+title: The Compliance Glasshouse
+description: >-
+  Engineering and policy deep dives bridging legal mandates with production
+  software — each idea ships as a short, a podcast, and a written field note.
+coverImage: ""
+projects:
+  - workforceguard
+  - eu-ai-assurance
+  - glasshouse
+audience: Compliance, ML platform, and policy-aware builders
+prerequisites: None — each release stands alone

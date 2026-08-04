@@ -9,7 +9,7 @@ import {
   releases,
   type Release,
   releaseThumb,
-  youtubeVideoId,
+  podcastHref,
   youtubeWatchUrl,
 } from "@/data/releases";
 import { formatDate } from "@/lib/utils";
@@ -36,8 +36,8 @@ export function Hero() {
           <Link href="/articles" className="btn-primary">
             Latest articles
           </Link>
-          <Link href="/videos" className="btn-secondary">
-            Channel videos
+          <Link href="/glasshouse" className="btn-secondary">
+            Compliance Glasshouse
           </Link>
           <a
             href={author.youtube}
@@ -45,7 +45,7 @@ export function Hero() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            {author.youtubeChannelName}
+            YouTube channel
           </a>
           <a href="#newsletter" className="btn-ghost">
             Subscribe
@@ -147,13 +147,18 @@ export function ChannelVideosSection({
     <section className="section-pad border-t border-[var(--border)]">
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div>
-          <SectionLabel>Short · Podcast · Note</SectionLabel>
+          <SectionLabel>The Compliance Glasshouse</SectionLabel>
           <p className="mt-2 max-w-xl text-sm text-[var(--muted)]">
-            {author.youtubeChannelName} — each idea ships as a short, a podcast
-            episode, and a written field note.
+            Each idea ships three ways: short · podcast · written field note.
           </p>
         </div>
         <div className="flex flex-wrap gap-3 text-sm">
+          <Link
+            href="/glasshouse"
+            className="text-[var(--muted)] hover:text-[var(--accent)]"
+          >
+            Glasshouse hub →
+          </Link>
           <Link
             href="/videos"
             className="text-[var(--muted)] hover:text-[var(--accent)]"
@@ -260,7 +265,7 @@ export function ReleaseTile({ release }: { release: Release }) {
           <FormatChip
             label="Podcast"
             ready={Boolean(release.podcast)}
-            href={release.podcast}
+            href={podcastHref(release)}
           />
           <FormatChip
             label="Blog"
