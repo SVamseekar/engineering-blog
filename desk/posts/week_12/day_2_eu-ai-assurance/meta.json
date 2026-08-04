@@ -5,7 +5,7 @@
   "project_key": "eu-ai-assurance",
   "week": 12,
   "day": 2,
-  "status": "draft",
+  "status": "approved",
   "curriculum_topic": "Training Compliance Officers on the Control Plane",
   "topic_meta": {
     "day": 57,
@@ -82,5 +82,6 @@
   "series": "EU AI Assurance Field Notes",
   "pov": "AI governance / ML platform lead wiring compliance into the release path",
   "title_align_pass": "all-projects-v1",
-  "updated_at": "2026-08-04T14:44:49.927221"
+  "updated_at": "2026-08-04T14:45:10.557030",
+  "approved_at": "2026-08-04T14:45:10.557030"
 }
