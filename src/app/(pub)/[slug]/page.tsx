@@ -5,26 +5,17 @@ import type { Metadata } from "next";
 import {
   getAllPostMeta,
   getPostBySlug,
-  getRelatedPosts,
   getSeriesPosts,
-  getSeriesById,
   getSiteUrl,
 } from "@/lib/content/load";
 import { renderMdx } from "@/lib/mdx/render";
 import { articleJsonLd } from "@/lib/seo/jsonld";
 import { formatDate } from "@/lib/utils";
-import { TableOfContents } from "@/components/article/TableOfContents";
 import { ScrollProgress } from "@/components/article/ScrollProgress";
-import { BookmarkButton } from "@/components/article/BookmarkButton";
 import { TrackView } from "@/components/article/TrackView";
-import { LinkCard } from "@/components/integrations/LinkCard";
-import {
-  MediaTriad,
-  mediaFromPostAndRelease,
-} from "@/components/integrations/MediaTriad";
-import { releaseForArticle } from "@/data/releases";
-import { getProject } from "@/data/projects";
 import { ArticleCard } from "@/components/home/HomeSections";
+
+const COMPLIANCE_GLASSHOUSE_SERIES = "compliance-glasshouse";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -53,13 +44,17 @@ export async function generateMetadata({
       url,
       publishedTime: post.publishedAt,
       modifiedTime: post.updatedAt || post.publishedAt,
-      images: image ? [{ url: image.startsWith("http") ? image : `${base}${image}` }] : undefined,
+      images: image
+        ? [{ url: image.startsWith("http") ? image : `${base}${image}` }]
+        : undefined,
     },
     twitter: {
       card: "summary_large_image",
       title: post.title,
       description: post.description,
-      images: image ? [image.startsWith("http") ? image : `${base}${image}`] : undefined,
+      images: image
+        ? [image.startsWith("http") ? image : `${base}${image}`]
+        : undefined,
     },
     alternates: { canonical: url },
   };
@@ -83,24 +78,14 @@ export default async function ArticlePage({ params }: PageProps) {
   const post = getPostBySlug(slug);
   if (!post) notFound();
 
-  const mdx = await renderMdx(post.content);
-  const related = getRelatedPosts(post, 4);
-  const relatedByTech = getAllPostMeta()
-    .filter(
-      (p) =>
-        p.slug !== post.slug &&
-        p.technologies.some((t) => post.technologies.includes(t))
-    )
-    .slice(0, 3);
+  // Desk pastes often start with `# Title`; the page header already shows it.
+  const body = stripLeadingTitleHeading(post.content, post.title);
+  const mdx = await renderMdx(body);
 
-  const seriesDef = post.series ? getSeriesById(post.series.id) : null;
-  const seriesPosts = post.series ? getSeriesPosts(post.series.id) : [];
-  const seriesIdx = seriesPosts.findIndex((p) => p.slug === post.slug);
-  const prev = seriesIdx > 0 ? seriesPosts[seriesIdx - 1] : null;
-  const next =
-    seriesIdx >= 0 && seriesIdx < seriesPosts.length - 1
-      ? seriesPosts[seriesIdx + 1]
-      : null;
+  // Related: only other posts in The Compliance Glasshouse series
+  const related = getSeriesPosts(COMPLIANCE_GLASSHOUSE_SERIES).filter(
+    (p) => p.slug !== post.slug
+  );
 
   return (
     <>
@@ -124,22 +109,6 @@ export default async function ArticlePage({ params }: PageProps) {
         >
           ← All articles
         </Link>
-
-        {seriesDef ? (
-          <div className="mt-4 flex flex-wrap items-center gap-2 rounded-lg border border-[var(--border)] bg-[var(--surface)] px-3 py-2 text-sm">
-            <span className="text-[var(--muted)]">Series:</span>
-            <Link
-              href={`/series/${seriesDef.id}`}
-              className="font-medium text-[var(--accent)]"
-            >
-              {seriesDef.title}
-            </Link>
-            <span className="text-[var(--muted)]">
-              · Part {post.series?.order ?? seriesIdx + 1} of{" "}
-              {seriesPosts.length}
-            </span>
-          </div>
-        ) : null}
 
         <header className="mt-6 max-w-3xl">
           <div className="flex flex-wrap items-center gap-3 text-xs font-semibold uppercase tracking-wider text-[var(--accent)]">
@@ -167,14 +136,13 @@ export default async function ArticlePage({ params }: PageProps) {
           {post.description ? (
             <p className="mt-4 text-lg text-[var(--muted)]">{post.description}</p>
           ) : null}
-          <div className="mt-4 flex flex-wrap items-center gap-3 text-sm text-[var(--muted)]">
+          <div className="mt-4 text-sm text-[var(--muted)]">
             <a
               href={post.author.url || "https://souravamseekar.com"}
               className="hover:text-[var(--accent)]"
             >
               {post.author.name}
             </a>
-            <BookmarkButton slug={post.slug} />
           </div>
         </header>
 
@@ -191,116 +159,17 @@ export default async function ArticlePage({ params }: PageProps) {
           </div>
         ) : null}
 
-        <div className="mt-10 grid gap-10 lg:grid-cols-[minmax(0,1fr)_220px]">
-          <div className="min-w-0">
-            <div className="lg:hidden">
-              <TableOfContents items={post.toc} />
-            </div>
-            <MediaTriad
-              {...mediaFromPostAndRelease(
-                post,
-                releaseForArticle(post.slug)
-              )}
-            />
-            <div className="prose-blog">{mdx}</div>
-            <div className="mt-10 space-y-2">
-              {post.github?.map((url) => (
-                <LinkCard
-                  key={url}
-                  href={url}
-                  title="GitHub repository"
-                  description={url}
-                  kind="github"
-                />
-              ))}
-              {post.demo ? (
-                <LinkCard href={post.demo} title="Live demo" kind="demo" />
-              ) : null}
-              {post.docs ? (
-                <LinkCard href={post.docs} title="Documentation" kind="docs" />
-              ) : null}
-              {post.notebook ? (
-                <LinkCard
-                  href={post.notebook}
-                  title="Interactive notebook"
-                  kind="notebook"
-                />
-              ) : null}
-              {post.apiDocs ? (
-                <LinkCard
-                  href={post.apiDocs}
-                  title="API documentation"
-                  kind="api"
-                />
-              ) : null}
-            </div>
-          </div>
-          <aside className="hidden lg:block">
-            <TableOfContents items={post.toc} />
-          </aside>
-        </div>
-
-        {seriesDef && (prev || next) ? (
-          <nav
-            className="mt-12 grid gap-4 border-t border-[var(--border)] pt-8 sm:grid-cols-2"
-            aria-label="Series navigation"
-          >
-            {prev ? (
-              <Link
-                href={`/${prev.slug}`}
-                className="rounded-xl border border-[var(--border)] p-4 hover:border-[var(--accent)]"
-              >
-                <span className="text-xs text-[var(--muted)]">Previous</span>
-                <span className="mt-1 block font-medium">{prev.title}</span>
-              </Link>
-            ) : (
-              <div />
-            )}
-            {next ? (
-              <Link
-                href={`/${next.slug}`}
-                className="rounded-xl border border-[var(--border)] p-4 text-right hover:border-[var(--accent)]"
-              >
-                <span className="text-xs text-[var(--muted)]">Next</span>
-                <span className="mt-1 block font-medium">{next.title}</span>
-              </Link>
-            ) : null}
-          </nav>
-        ) : null}
-
-        {post.projects.length ? (
-          <section className="mt-12 border-t border-[var(--border)] pt-8">
-            <h2 className="text-xs font-semibold uppercase tracking-wider text-[var(--muted)]">
-              Related projects
-            </h2>
-            <ul className="mt-4 grid gap-3 sm:grid-cols-2">
-              {post.projects.map((id) => {
-                const pr = getProject(id);
-                if (!pr) return null;
-                return (
-                  <li key={id}>
-                    <Link
-                      href={`/projects/${id}`}
-                      className="block rounded-xl border border-[var(--border)] p-4 hover:border-[var(--accent)]"
-                    >
-                      <span className="font-medium">{pr.name}</span>
-                      <span className="mt-1 block text-sm text-[var(--muted)]">
-                        {pr.tagline}
-                      </span>
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
-          </section>
-        ) : null}
+        <div className="prose-blog mx-auto mt-10 max-w-3xl">{mdx}</div>
 
         {related.length ? (
-          <section className="mt-12 border-t border-[var(--border)] pt-8">
+          <section className="mx-auto mt-14 max-w-3xl border-t border-[var(--border)] pt-10 pb-16">
             <h2 className="text-xs font-semibold uppercase tracking-wider text-[var(--muted)]">
               Related articles
             </h2>
-            <ul className="mt-4 grid gap-4 sm:grid-cols-2">
+            <p className="mt-1 text-sm text-[var(--muted)]">
+              From The Compliance Glasshouse
+            </p>
+            <ul className="mt-6 grid gap-4 sm:grid-cols-2">
               {related.map((p) => (
                 <li key={p.slug}>
                   <ArticleCard post={p} compact />
@@ -309,27 +178,17 @@ export default async function ArticlePage({ params }: PageProps) {
             </ul>
           </section>
         ) : null}
-
-        {relatedByTech.length ? (
-          <section className="mt-12 border-t border-[var(--border)] pt-8 pb-16">
-            <h2 className="text-xs font-semibold uppercase tracking-wider text-[var(--muted)]">
-              Related by technology
-            </h2>
-            <ul className="mt-4 space-y-2">
-              {relatedByTech.map((p) => (
-                <li key={p.slug}>
-                  <Link
-                    href={`/${p.slug}`}
-                    className="text-[var(--fg)] hover:text-[var(--accent)]"
-                  >
-                    {p.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </section>
-        ) : null}
       </article>
     </>
   );
+}
+
+/** Drop a leading `# Title` that duplicates the article header. */
+function stripLeadingTitleHeading(markdown: string, title: string): string {
+  const trimmed = markdown.replace(/^\uFEFF?/, "").trimStart();
+  const match = trimmed.match(/^#\s+(.+?)\s*\n+/);
+  if (!match) return markdown;
+  const heading = match[1].trim().replace(/^["']|["']$/g, "");
+  if (heading.toLowerCase() !== title.trim().toLowerCase()) return markdown;
+  return trimmed.slice(match[0].length);
 }

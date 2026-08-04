@@ -476,28 +476,47 @@ export function ArticleCard({
   return (
     <Link
       href={`/${post.slug}`}
-      className="group flex h-full flex-col rounded-xl border border-[var(--border)] bg-[var(--surface)] p-5 shadow-[var(--shadow-sm)] transition hover:border-[var(--accent)]/40 hover:shadow-[var(--shadow-md)]"
+      className="group flex h-full flex-col overflow-hidden rounded-xl border border-[var(--border)] bg-[var(--surface)] shadow-[var(--shadow-sm)] transition hover:border-[var(--accent)]/40 hover:shadow-[var(--shadow-md)]"
     >
-      <p className="text-[11px] font-semibold uppercase tracking-wider text-[var(--accent)]">
-        {(post.projects[0] || "general") + " · " + formatDate(post.publishedAt)}
-      </p>
-      <h3
-        className={
-          compact
-            ? "mt-2 font-display text-base leading-snug text-[var(--fg)] group-hover:text-[var(--accent)]"
-            : "mt-2 font-display text-lg leading-snug text-[var(--fg)] group-hover:text-[var(--accent)]"
-        }
-      >
-        {post.title}
-      </h3>
-      {!compact ? (
-        <p className="mt-2 line-clamp-2 flex-1 text-sm text-[var(--muted)]">
-          {post.description}
-        </p>
+      {post.coverImage ? (
+        <div
+          className={
+            compact
+              ? "relative aspect-[16/9] w-full bg-[var(--muted-bg)]"
+              : "relative aspect-[2/1] w-full bg-[var(--muted-bg)]"
+          }
+        >
+          <Image
+            src={post.coverImage}
+            alt=""
+            fill
+            className="object-cover transition duration-300 group-hover:scale-[1.02]"
+            sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw"
+          />
+        </div>
       ) : null}
-      <p className="mt-3 text-xs text-[var(--muted)]">
-        {post.readingTimeMinutes} min
-      </p>
+      <div className="flex flex-1 flex-col p-5">
+        <p className="text-[11px] font-semibold uppercase tracking-wider text-[var(--accent)]">
+          {(post.projects[0] || "general") + " · " + formatDate(post.publishedAt)}
+        </p>
+        <h3
+          className={
+            compact
+              ? "mt-2 font-display text-base leading-snug text-[var(--fg)] group-hover:text-[var(--accent)]"
+              : "mt-2 font-display text-lg leading-snug text-[var(--fg)] group-hover:text-[var(--accent)]"
+          }
+        >
+          {post.title}
+        </h3>
+        {!compact ? (
+          <p className="mt-2 line-clamp-2 flex-1 text-sm text-[var(--muted)]">
+            {post.description}
+          </p>
+        ) : null}
+        <p className="mt-3 text-xs text-[var(--muted)]">
+          {post.readingTimeMinutes} min
+        </p>
+      </div>
     </Link>
   );
 }
