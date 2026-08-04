@@ -12,6 +12,7 @@ import {
   FeaturedArticle,
   EditorsPicks,
   LatestArticles,
+  ChannelVideosSection,
   PopularSeries,
   CategoriesSection,
   TopicsSection,
@@ -34,6 +35,7 @@ export default function HomePage() {
     <>
       <Hero />
       <FeaturedArticle post={featured} />
+      <ChannelVideosSection />
       <EditorsPicks posts={picks} />
       <LatestArticles posts={latest} />
       <PopularSeries series={series} counts={counts} />

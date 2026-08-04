@@ -5,6 +5,10 @@ export const author = {
   twitter: "https://x.com",
   github: "https://github.com/SVamseekar",
   linkedin: "https://www.linkedin.com/in/",
+  /** YouTube channel — engineering & policy deep dives */
+  youtube: "https://www.youtube.com/channel/UCnZQlhyFXJbWn6e6vjm3INA",
+  youtubeChannelId: "UCnZQlhyFXJbWn6e6vjm3INA",
+  youtubeChannelName: "The Compliance Glasshouse",
   email: "mailto:hello@souravamseekar.com",
   bio: "Building domain systems across kitchens, compliance, workforce, transit, and commercial analytics.",
 } as const;
@@ -13,7 +17,7 @@ export const site = {
   name: "Engineering Notes",
   title: "Engineering Notes — Marti Soura Vamseekar",
   description:
-    "Production engineering writing on systems I build: restaurant ops, EU AI assurance, workforce, transit safety, and commercial analytics — wired to real products.",
+    "Production engineering writing on systems I build: restaurant ops, EU AI assurance, workforce, transit safety, and commercial analytics — wired to real products. Companion writing to The Compliance Glasshouse on YouTube.",
   url: "https://blog.souravamseekar.com",
   locale: "en_GB",
 } as const;

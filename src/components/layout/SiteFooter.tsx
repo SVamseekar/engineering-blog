@@ -48,6 +48,18 @@ export function SiteFooter() {
               <a href={author.github}>GitHub</a>
             </li>
             <li>
+              <a
+                href={author.youtube}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {author.youtubeChannelName}
+              </a>
+            </li>
+            <li>
+              <Link href="/videos">Channel videos</Link>
+            </li>
+            <li>
               <Link href="/rss.xml">RSS</Link>
             </li>
           </ul>
