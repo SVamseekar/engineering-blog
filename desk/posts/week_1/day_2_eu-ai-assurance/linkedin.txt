@@ -1,0 +1,15 @@
+EU AI Assurance Field notes · field note
+
+Classifying an AI system's risk tier under the EU AI Act shouldn't be an informal negotiation between engineering and legal over a Slack thread.
+
+If you rely on static surveys or spreadsheet checkboxes to track high-risk models, you risk silent compliance drift. A minor feature update in production can quietly push a system into high-risk territory without triggering required audits.
+
+Inside EU AI Assurance OS, we treat risk classification as a formal, deterministic state machine backed by a hash-chained audit ledger. When a system enters the evaluation phase, assisted risk classification helps parse statute complexity—while human operators retain final accountability before locking the state.
+
+Once classified as high-risk, the engine binds mandatory controls from our control catalog and routes evaluation results through durable worker queues with HMAC-signed release gates.
+
+How does your team currently prevent models from drifting past regulatory boundaries in CI/CD?
+
+Links (write-up, product, repo) in the first comment.
+
+#Compliance #EUAIAct #AIGovernance #MLOps #ResponsibleAI
