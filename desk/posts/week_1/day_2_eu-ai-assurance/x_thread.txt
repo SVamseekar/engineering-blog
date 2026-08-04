@@ -1,0 +1,15 @@
+EU AI Assurance (1/7): High-risk is a workflow label, not a vibe. Relying on spreadsheet checkboxes and informal legal reviews for EU AI Act compliance is a recipe for silent drift.
+
+EU AI Assurance Field Notes (2/7): Traditional GRC tools treat risk as static metadata. In an active ML pipeline, static metadata quickly disconnects from reality when feature stores or container configs change.
+
+EU AI Assurance Field Notes (3/7): We solve this by treating risk classification as a deterministic state machine: DRAFT_ASSESSMENT -> EVALUATING -> CLASSIFIED -> CONTROLS_BOUND -> VERIFIED_LOCK.
+
+EU AI Assurance Field Notes (4/7): During evaluation, assisted risk classification parses statute requirements using vector search over control libraries to suggest risk tiers. Humans remain entirely accountable for final sign-off.
+
+EU AI Assurance Field Notes (5/7): Every state change is recorded in a hash-chained audit ledger. If someone attempts to manually downgrade a risk tier on the database, the SHA-256 chain breaks, immediately blocking deploys.
+
+EU AI Assurance Field Notes (6/7): Release gates are enforced via durable worker queues and HMAC-signed callbacks. If evaluation metrics fail or controls are unbound, the pipeline halts securely.
+
+EU AI Assurance Field Notes (7/7): Read the full field notes on turning legal obligations into code-driven guardrails over at our blog.
+#EUAIAct #AIGovernance #MLOps
+(Links in first reply.)
