@@ -1,0 +1,15 @@
+Compliance officers and ML engineers speak entirely different languages. Officers view records as flexible legal classifications; engineers view them as immutable system metrics. This week on EU AI Assurance Field Notes, we explore training compliance officers on the tool. 🧵
+
+1/ If your compliance tool lets users edit historical training run properties or backdate evaluation tests to fit a dynamic policy classification, your audit trail is technically invalid.
+
+2/ Standard GRC platforms lack connection to physical infrastructure, while MLOps tools lack regulatory taxonomy. You must decouple the mutable policy state machine from the immutable provenance registry.
+
+3/ To make this accessible without requiring an ML PhD, we use sector packs (HR, finance, insurance) that pre-configure risk taxonomy trees for specific operational domains.
+
+4/ For obligation determination, we use a grounded RAG over our internal control library. It surfaces relevant statutory context and suggests control mappings, but the human compliance officer always retains final sign-off authority.
+
+5/ Finally, we enforce compliance at the edge via CI release-gate contracts. If a model lacks verified certification tokens and passing evaluation worker scores, the deployment pipeline blocks the release automatically.
+
+6/ Read the full breakdown of UX trade-offs, architectural decisions, and repository links on our field notes blog. Soft CTA to explore the open-source repo.
+#EUAIAct #AIGovernance #MLOps
+(Links in first reply.)
