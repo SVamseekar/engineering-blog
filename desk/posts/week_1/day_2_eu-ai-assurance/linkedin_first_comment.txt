@@ -1,0 +1,6 @@
+Full write-up: https://blog.souravamseekar.com/high-risk-is-a-workflow-label-not-a-meeting-vibe
+Product / demo: https://euassuranceai.souravamseekar.com
+Source: https://github.com/SVamseekar/eu-ai-assurance-os
+Portfolio: https://souravamseekar.com
+
+Context: High-Risk Is a Workflow Label, Not a Meeting Vibe
